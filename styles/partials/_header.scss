@@ -6,5 +6,25 @@ header {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	background-color: gainsboro;
+	align-items: center;
+	background-color: $lightHeader;
+	padding: 2%;
+	border-right: 1px solid $lightBorder;
+	div {
+		width: 50%;
+		img {
+			border-radius: 50%;
+		}
+	}
+	nav {
+		ul {
+			list-style: none;
+			padding: 0;
+			margin-top: 3%;
+		}
+	}
+}
+
+a {
+	text-decoration: none;
 }

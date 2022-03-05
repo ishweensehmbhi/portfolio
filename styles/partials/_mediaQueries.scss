@@ -1,0 +1,27 @@
+@media (prefers-reduced-motion: no-preference) {
+	html {
+		scroll-behavior: smooth;
+	}
+}
+
+@media (min-width: 1400px) {
+	header {
+		width: 400px;
+	}
+	main,
+	footer {
+		margin-left: 400px;
+	}
+}
+
+@media (max-width: 500px) {
+	header {
+		width: 100%;
+		height: auto;
+	}
+	main,
+	footer {
+		width: 100%;
+		margin-left: 0;
+	}
+}

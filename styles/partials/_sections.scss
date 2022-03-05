@@ -1,8 +1,15 @@
 main {
-	padding: 2%;
+	padding: 3%;
 	margin-left: 30%;
+	background: $lightBackground;
 }
-section {
+
+.wrapper {
+	width: 80%;
+	max-width: 1000px;
+}
+
+section:not(.projects) {
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
