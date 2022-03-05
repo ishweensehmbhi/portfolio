@@ -274,14 +274,13 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 500;
-  line-height: 1.5;
   font-family: "Montserrat", sans-serif;
 }
 
 body {
   font-family: "Mulish", serif;
   line-height: 1.875rem;
+  color: #000;
 }
 
 header {
@@ -326,10 +325,8 @@ header nav a:hover, header nav a:focus {
 }
 .intro .highlight {
   background-color: #e6d6ff;
-  -webkit-animation-name: highlightEffect;
-          animation-name: highlightEffect;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
+  -webkit-animation: highlight-effect 1.5s;
+          animation: highlight-effect 1.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   background-size: 200%;
@@ -338,10 +335,8 @@ header nav a:hover, header nav a:focus {
 }
 .intro .highlight:nth-of-type(2) {
   background-color: #ffc8da;
-  -webkit-animation-name: highlightEffect;
-          animation-name: highlightEffect;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
+  -webkit-animation: highlight-effect 1.5s;
+          animation: highlight-effect 1.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   background-size: 200%;
@@ -350,50 +345,77 @@ header nav a:hover, header nav a:focus {
 }
 .intro .highlight:nth-of-type(3) {
   background-color: #ffdf84;
-  -webkit-animation-name: highlightEffect;
-          animation-name: highlightEffect;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
+  -webkit-animation: highlight-effect 1.5s;
+          animation: highlight-effect 1.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   background-size: 200%;
   background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #f8f8f8), color-stop(50%, transparent));
   background-image: linear-gradient(to right, #f8f8f8 50%, transparent 50%);
 }
-@-webkit-keyframes highlightEffect {
-  from {
-    background-position: 0;
-  }
-  to {
-    background-position: -100%;
-  }
-}
-@keyframes highlightEffect {
-  from {
-    background-position: 0;
-  }
-  to {
-    background-position: -100%;
-  }
-}
 .intro i {
   font-size: 2rem;
-  -webkit-animation: hover-me 0.75s infinite ease-in-out alternate;
-          animation: hover-me 0.75s infinite ease-in-out alternate;
+  -webkit-animation: chevron-bounce 0.75s infinite ease-in-out alternate;
+          animation: chevron-bounce 0.75s infinite ease-in-out alternate;
 }
-@-webkit-keyframes hover-me {
-  100% {
-    -webkit-transform: translate3d(0, 15px, 0);
-            transform: translate3d(0, 15px, 0);
+
+.about {
+  text-align: left;
+}
+.about .subtitle-copy {
+  font-weight: bold;
+  text-transform: uppercase;
+  -webkit-filter: drop-shadow(2px 2px 3px #e6d6ff);
+          filter: drop-shadow(2px 2px 3px #e6d6ff);
+}
+.about sup {
+  color: #767676;
+}
+.about .text-copy,
+.about .handwritten {
+  font-size: 1.2rem;
+}
+.about .handwritten {
+  font-family: "Nanum Pen Script", sans-serif;
+  font-weight: 400;
+  color: #767676;
+}
+.about .handwritten a {
+  background-color: #e6d6ff;
+}
+.about .handwritten a:visited {
+  color: #000;
+}
+
+@-webkit-keyframes highlight-effect {
+  from {
+    background-position: 0;
   }
-}
-@keyframes hover-me {
-  100% {
-    -webkit-transform: translate3d(0, 15px, 0);
-            transform: translate3d(0, 15px, 0);
+  to {
+    background-position: -100%;
   }
 }
 
+@keyframes highlight-effect {
+  from {
+    background-position: 0;
+  }
+  to {
+    background-position: -100%;
+  }
+}
+@-webkit-keyframes chevron-bounce {
+  100% {
+    -webkit-transform: translate3d(0, 15px, 0);
+            transform: translate3d(0, 15px, 0);
+  }
+}
+@keyframes chevron-bounce {
+  100% {
+    -webkit-transform: translate3d(0, 15px, 0);
+            transform: translate3d(0, 15px, 0);
+  }
+}
 main {
   padding: 3%;
   margin-left: 30%;
