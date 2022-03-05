@@ -38,15 +38,82 @@ header {
 			color: $lightLinks;
 			font-family: $headingFont;
 			font-weight: 600;
-			letter-spacing: 2px;
-			transition: background-color
-				cubic-bezier(0.165, 0.84, 0.44, 1) 0.35s;
+			letter-spacing: 1px;
+			transition: background-color ease-in-out 0.35s;
 			&:hover,
 			&:focus {
 				background-color: $lightAccentColor;
 				transition: background-color
 					cubic-bezier(0.165, 0.84, 0.44, 1) 0.35s;
 			}
+		}
+	}
+}
+
+.intro {
+	text-align: center;
+	.big-copy {
+		font-family: $headingFont;
+		font-size: 2rem;
+		line-height: 40px;
+	}
+
+	.highlight {
+		background-color: $lightAccentColor;
+		// left to right highlighting animation
+		animation-name: highlightEffect;
+		animation-duration: 1.5s;
+		animation-fill-mode: forwards;
+		background-size: 200%;
+		background-image: linear-gradient(
+			to right,
+			$lightBackground 50%,
+			transparent 50%
+		);
+	}
+	.highlight:nth-of-type(2) {
+		background-color: $lightAccentColorSecondary;
+		animation-name: highlightEffect;
+		animation-duration: 1.5s;
+		animation-fill-mode: forwards;
+		background-size: 200%;
+		background-image: linear-gradient(
+			to right,
+			$lightBackground 50%,
+			transparent 50%
+		);
+	}
+	.highlight:nth-of-type(3) {
+		background-color: $lightAccentColorTertiary;
+		animation-name: highlightEffect;
+		animation-duration: 1.5s;
+		animation-fill-mode: forwards;
+		background-size: 200%;
+		background-image: linear-gradient(
+			to right,
+			$lightBackground 50%,
+			transparent 50%
+		);
+	}
+
+	@keyframes highlightEffect {
+		from {
+			background-position: 0;
+		}
+
+		to {
+			background-position: -100%;
+		}
+	}
+
+	i {
+		font-size: 2rem;
+		animation: hover-me 0.75s infinite ease-in-out alternate;
+	}
+
+	@keyframes hover-me {
+		100% {
+			transform: translate3d(0, 15px, 0);
 		}
 	}
 }

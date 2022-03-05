@@ -14,14 +14,30 @@
 	}
 }
 
-@media (max-width: 500px) {
+// Tablet layout
+@media (max-width: 900px) {
 	header {
 		width: 100%;
 		height: auto;
+		position: static;
+		z-index: 0;
 	}
 	main,
 	footer {
 		width: 100%;
 		margin-left: 0;
 	}
+}
+
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+body {
+	animation: fadein 1s;
 }
