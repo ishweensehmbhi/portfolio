@@ -55,10 +55,7 @@ header {
 		font-size: 2rem;
 		line-height: 40px;
 	}
-
 	.highlight {
-		background-color: $lightAccentColor;
-		// left to right highlighting animation
 		animation: highlight-effect 1.5s;
 		animation-fill-mode: forwards;
 		background-size: 200%;
@@ -67,43 +64,30 @@ header {
 			$lightBackground 50%,
 			transparent 50%
 		);
+	}
+	.highlight:nth-of-type(1) {
+		background-color: $lightAccentColor;
 	}
 	.highlight:nth-of-type(2) {
 		background-color: $lightAccentColorSecondary;
-		animation: highlight-effect 1.5s;
-		animation-fill-mode: forwards;
-		background-size: 200%;
-		background-image: linear-gradient(
-			to right,
-			$lightBackground 50%,
-			transparent 50%
-		);
 	}
 	.highlight:nth-of-type(3) {
 		background-color: $lightAccentColorTertiary;
-		animation: highlight-effect 1.5s;
-		animation-fill-mode: forwards;
-		background-size: 200%;
-		background-image: linear-gradient(
-			to right,
-			$lightBackground 50%,
-			transparent 50%
-		);
 	}
-
 	i {
 		font-size: 2rem;
 		animation: chevron-bounce 0.75s infinite ease-in-out alternate;
 	}
 }
 
+.subtitle-copy {
+	font-weight: bold;
+	text-transform: uppercase;
+	filter: drop-shadow(2px 2px 3px $lightAccentColor);
+}
+
 .about {
 	text-align: left;
-	.subtitle-copy {
-		font-weight: bold;
-		text-transform: uppercase;
-		filter: drop-shadow(2px 2px 3px $lightAccentColor);
-	}
 	sup {
 		color: $lightLinks;
 	}
@@ -120,7 +104,28 @@ header {
 			&:visited {
 				color: $lightText;
 			}
+			&:hover,
+			&:focus {
+				background-color: $lightAccentColorSecondary;
+				animation: highlight-effect 0.5s;
+				animation-fill-mode: forwards;
+				background-size: 200%;
+				background-image: linear-gradient(
+					to right,
+					$lightAccentColor 50%,
+					transparent 50%
+				);
+			}
 		}
+	}
+	i {
+		color: $lightAccentColorTertiary;
+	}
+}
+
+.projects {
+	.subtitle-copy {
+		margin-bottom: 5%;
 	}
 }
 
