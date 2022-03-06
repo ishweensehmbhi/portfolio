@@ -10,6 +10,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Montserrat:wght@400;500;600;700&family=Mulish:ital,wght@0,400;0,700;1,900&family=Nanum+Pen+Script&display=swap"
 		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
 	<script src="https://kit.fontawesome.com/26a5b5576c.js" crossorigin="anonymous"></script>
 	<title>Document</title>
 </head>
@@ -23,8 +24,9 @@
 		</div>
 		<nav>
 			<ul>
-				<li><a href="#intro">Intro</a></li>
+				<li><a href="#top">Intro</a></li>
 				<li><a href="#about">About</a></li>
+				<li><a href="#skills">Skills</a></li>
 				<li><a href="#projects">Projects</a></li>
 				<li><a href="#contact">Contact</a></li>
 			</ul>
@@ -32,6 +34,7 @@
 	</header>
 
 	<main id="top">
+		<!-- intro section begins  -->
 		<section class="intro" id="intro">
 			<div class="wrapper">
 				<p class="big-copy">
@@ -44,25 +47,25 @@
 			</div>
 		</section>
 
+		<!-- about section begins  -->
 		<section class="about" id="about">
 			<div class="wrapper">
 				<h2 class="subtitle-copy">
 					About Me ✨
 				</h2>
 				<p class="text-copy">
-					I recently graduated
-					from Juno College
-					of Technology. Prior to becoming a developer, I
+					I am currently working towards graduation from the Juno College of Technology's Web
+					Development program. Prior to becoming a developer, I
 					completed
-					my Bachelor's Degree in Industrial Engineering
-					from the University of Toronto. <sup class="handwritten">[1]</sup>
+					my Bachelor's Degree in Industrial Engineering<sup class="handwritten">[1]</sup>
+					from the University of Toronto and specialized in Human Factors Engineering<sup
+						class="handwritten">[2]</sup>.
 				</p>
 				<p class="text-copy">
-					Using my multi-disciplinary background in mathematical, physical, and
-					social sciences, I can generate creative solutions to solve complex problems and meet the
+					I leverage my multi-disciplinary background in mathematical, physical, and
+					social sciences to solve complex problems and generate creative solutions which meet the
 					end user's needs. My unique skillset also allows me to collaborate on cross-functional
-					teams
-					effectively.
+					teams effectively.
 				</p>
 				<p class="text-copy">
 					In my spare time, you'll find me playing video games 🎮
@@ -79,10 +82,93 @@
 					[1] Industrial and
 					systems engineering is concerned with the
 					design, improvement and installation of integrated systems of
-					people, materials, information, equipment and energy. Source?
-					<a href="https://www.iise.org/details.aspx?id=282">The IISE
-						manual!</a>
+					people, materials, information, equipment and energy. (from
+					<a href="https://www.iise.org/details.aspx?id=282">the IISE
+						manual!</a>)
 				</p>
+				<p class="handwritten">
+					[2] Human Factors is concerned with the application of what we know about people, their
+					abilities, characteristics, and
+					limitations to the design of equipment they use, environments in which they function, and
+					jobs they perform. (from
+					<a href="https://www.hfes.org/About-HFES/What-is-Human-Factors-and-Ergonomics">the
+						HFES</a> official definition!)
+				</p>
+			</div>
+		</section>
+
+		<!-- skills section begins  -->
+		<section class="skills" id="skills">
+			<div class="wrapper">
+				<h2 class="subtitle-copy">My Skills</h2>
+				<ul class="skills-list">
+					<li class="skills-item">
+						<i class="fa-brands fa-react"></i>
+						<p>React</p>
+					</li>
+					<li class="skills-item">
+						<i class="devicon-firebase-plain"></i>
+						<p>Firebase</p>
+					</li>
+					<li class="skills-item">
+						<i class="devicon-javascript-plain"></i>
+						<p>JavaScript</p>
+					</li>
+					<li class="skills-item">
+						<i class="fa-brands fa-git-alt"></i>
+						<p>Git</p>
+					</li>
+					<li class="skills-item">
+						<i class="devicon-jquery-plain"></i>
+						<p>JQuery</p>
+					</li>
+					<li class="skills-item">
+						<i class="devicon-sass-original"></i>
+						<p>SCSS</p>
+					</li>
+					<li class="skills-item">
+						<i class="devicon-css3-plain"></i>
+						<p>CSS3</p>
+					</li>
+					<li class="skills-item">
+						<i class="devicon-html5-plain-wordmark"></i>
+						<p>HTML5</p>
+					</li>
+					<li class="skills-item">
+						<i class="devicon-python-plain"></i>
+						<p>Python</p>
+					</li>
+					<li class="skills-item">
+						<i class="fa-solid fa-fire-flame-curved"></i>
+						<p>PyTorch</p>
+					</li>
+					<li class="skills-item">
+						<i class="devicon-pandas-original"></i>
+						<p>Pandas</p>
+					</li>
+					<li class="skills-item">
+						<i class="fa-solid fa-universal-access"></i>
+						<p>WCAG Adherence</p>
+					</li>
+					<li class="skills-item">
+						<i class="fa-solid fa-user"></i>
+						<p>User Research</p>
+					</li>
+					<li class="skills-item">
+						<i class="fa-solid fa-diagram-project"></i>
+						<p>UML Diagramming</p>
+					</li>
+
+					<li class="skills-item">
+						<i class="devicon-confluence-original"></i>
+						<p>Confluence</p>
+					</li>
+					<li class="skills-item">
+						<i class="devicon-jira-plain"></i>
+						<p>Jira</p>
+					</li>
+
+				</ul>
 			</div>
 		</section>
 
@@ -91,24 +177,24 @@
 				<h2 class="subtitle-copy">Featured Projects</h2>
 				<article class="project">
 					<div class="flex">
-
-						<div class="imageContainer">
-							<img src="./assets/critterpedia-mockup.svg" alt="">
+						<div class="image-container">
+							<img src="./assets/critterpedia-mockup.svg"
+								alt="a browser mockup of the critterpedia project">
 						</div>
-						<div class="textContainer">
+						<div class="text-container">
 							<h3>Critterpedia</h3>
 							<p>
-								A tool for Animal Crossing: New Horizons players who are curious to know
-								what
-								critters they can encounter on their
-								island! The app allows the user to search for bugs, fish, or sea
+								A tool for Animal Crossing: New Horizons which allows the user to search
+								for bugs, fish, or sea
 								creatures on their
 								island by specifying the hemisphere
 								their island is in and the month. This project was made using data from
 								the <a href="https://acnhapi.com/">ACNH API</a> in collaboration with
 								Michelle Wong.</p>
-							<ul class="stack">
+							<ul class="stack-list">
+								<li>
 
+								</li>
 							</ul>
 							<ul class="links">
 								<li>
@@ -125,10 +211,11 @@
 
 				<article class="project">
 					<div class="flex">
-						<div class="imageContainer">
-							<img src="./assets/harper-PSD-mockup.svg" alt="">
+						<div class="image-container">
+							<img src="./assets/harper-PSD-mockup.svg"
+								alt="a browser mockup of the harper's blog project">
 						</div>
-						<div class="textContainer">
+						<div class="text-container">
 							<h3>Harper's Blog - PSD Conversion</h3>
 							<p>
 								A tool for Animal Crossing: New Horizons players who are curious to know
@@ -144,12 +231,14 @@
 
 				<article class="project">
 					<div class="flex">
-						<div class="imageContainer">
-							<img src="./assets/tech-jargon-mockup.svg" alt="">
+						<div class="image-container">
+							<img src="./assets/tech-jargon-mockup.svg"
+								alt="a browser mockup of the tech jargon project">
 						</div>
-						<div class="textContainer">
+						<div class="text-container">
 							<h3>Real Tech or Fake Jargon?</h3>
-							<p>A multiple choice quiz application. I'm quite proud
+							<p>A multiple choice quiz application where the user must guess which choice
+								is jargon when presented among three actual tech tools. I'm quite proud
 								of this one as it was used as an example for
 								future students taking the course!
 							</p>

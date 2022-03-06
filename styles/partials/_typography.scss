@@ -87,10 +87,14 @@ header {
 	font-weight: bold;
 	text-transform: uppercase;
 	filter: drop-shadow(2px 2px 3px $lightAccentColor);
+	margin-bottom: 5%;
 }
 
 .about {
 	text-align: left;
+	.subtitle-copy {
+		margin-bottom: 3%;
+	}
 	sup {
 		color: $lightLinks;
 	}
@@ -123,12 +127,6 @@ header {
 	}
 	i {
 		color: $lightAccentColorTertiary;
-	}
-}
-
-.projects {
-	.subtitle-copy {
-		margin: 5%;
 	}
 }
 

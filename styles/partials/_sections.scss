@@ -21,6 +21,35 @@ section:not(.projects) {
 	justify-content: center;
 }
 
+.skills {
+	h2 {
+		margin-bottom: 5%;
+	}
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		li {
+			text-align: center;
+			width: calc(25% - 2%);
+			margin: 0 1% 7% 1%;
+			i {
+				font-size: 2.2rem;
+				color: $lightAccentColorQuaternary;
+			}
+			p {
+				font-size: 1rem;
+				margin: 3% 0 0;
+				font-family: $bodyFont;
+			}
+		}
+	}
+}
+
 .projects {
 	article {
 		background-color: $lightHeader;
@@ -30,17 +59,17 @@ section:not(.projects) {
 		.flex {
 			display: flex;
 			flex-direction: row;
-			.imageContainer {
+			.image-container {
 				width: 60%;
 			}
-			.imageContainer {
+			.image-container {
 				img {
 					max-width: 100%;
 					border-radius: 1.5%;
 					object-fit: contain;
 				}
 			}
-			.textContainer {
+			.text-container {
 				padding: 1%;
 				display: flex;
 				flex-direction: column;
