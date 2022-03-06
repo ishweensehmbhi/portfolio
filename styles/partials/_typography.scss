@@ -49,6 +49,7 @@ header {
 
 // Intro section typography, including text animations
 .intro {
+	position: relative;
 	text-align: center;
 	.big-copy {
 		font-family: $headingFont;
@@ -75,8 +76,10 @@ header {
 		background-color: $lightAccentColorTertiary;
 	}
 	i {
-		font-size: 2rem;
+		font-size: 3rem;
 		animation: chevron-bounce 0.75s infinite ease-in-out alternate;
+		position: absolute;
+		bottom: 10vh;
 	}
 }
 
@@ -125,8 +128,12 @@ header {
 
 .projects {
 	.subtitle-copy {
-		margin-bottom: 5%;
+		margin: 5%;
 	}
+}
+
+.footer-copy {
+	font-weight: 600;
 }
 
 @keyframes highlight-effect {

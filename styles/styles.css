@@ -316,6 +316,7 @@ header nav a:hover, header nav a:focus {
 }
 
 .intro {
+  position: relative;
   text-align: center;
 }
 .intro .big-copy {
@@ -342,9 +343,11 @@ header nav a:hover, header nav a:focus {
   background-color: #ffdf84;
 }
 .intro i {
-  font-size: 2rem;
+  font-size: 3rem;
   -webkit-animation: chevron-bounce 0.75s infinite ease-in-out alternate;
           animation: chevron-bounce 0.75s infinite ease-in-out alternate;
+  position: absolute;
+  bottom: 10vh;
 }
 
 .subtitle-copy {
@@ -390,7 +393,11 @@ header nav a:hover, header nav a:focus {
 }
 
 .projects .subtitle-copy {
-  margin-bottom: 5%;
+  margin: 5%;
+}
+
+.footer-copy {
+  font-weight: 600;
 }
 
 @-webkit-keyframes highlight-effect {
@@ -481,16 +488,37 @@ section:not(.projects) {
       -ms-flex-direction: row;
           flex-direction: row;
 }
-.projects article .flex .imageContainer,
-.projects article .flex .textContainer {
-  width: 50%;
+.projects article .flex .imageContainer {
+  width: 60%;
 }
 .projects article .flex .imageContainer img {
-  height: 500px;
-  width: 100%;
+  max-width: 100%;
+  border-radius: 1.5%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .projects article .flex .textContainer {
   padding: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 40%;
+}
+.projects article ul {
+  list-style: none;
+  padding: 0;
+}
+.projects article ul li {
+  display: inline;
+  padding: 2%;
+  border: 1px solid black;
 }
 
 footer {
