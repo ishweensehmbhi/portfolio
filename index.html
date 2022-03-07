@@ -11,6 +11,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Montserrat:wght@400;500;600;700&family=Mulish:ital,wght@0,400;0,700;1,900&family=Nanum+Pen+Script&display=swap"
 		rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<script src="https://kit.fontawesome.com/26a5b5576c.js" crossorigin="anonymous"></script>
 	<title>Ishween Sehmbhi | Portfolio</title>
 </head>
@@ -173,7 +174,8 @@
 		<section class="projects" id="projects">
 			<div class="wrapper">
 				<h2 class="subtitle-copy">Featured Projects</h2>
-				<article class="project">
+				<!-- Project 1 begins  -->
+				<article class="project" data-aos="fade-left" data-aos-duration="2000" data-aos="ease-in-out">
 					<div class="flex">
 						<div class="image-container">
 							<img src="./assets/critterpedia.svg"
@@ -224,7 +226,8 @@
 					</div>
 				</article>
 
-				<article class="project">
+				<!-- Project 2 begins  -->
+				<article class="project" data-aos="fade-right" data-aos-duration="2000" data-aos="ease-in-out">
 					<div class="flex">
 						<div class="text-container">
 							<h3>Harper's Blog: A PSD Conversion</h3>
@@ -275,7 +278,8 @@
 					</div>
 				</article>
 
-				<article class="project">
+				<!-- Project 3 begins  -->
+				<article class="project" data-aos="fade-left" data-aos-duration="2000" data-aos="ease-in-out">
 					<div class="flex">
 						<div class="image-container">
 							<img src="./assets/tech-jargon.svg"
@@ -329,7 +333,7 @@
 
 
 		<!-- connect formspree here  -->
-		<section class="contact" id="contact">
+		<section class="contact" id="contact" data-aos="fade-up" data-aos-duration="2000" data-aos="ease-in-out">
 			<div class="wrapper">
 				<div class="contact-info">
 					<h3 class="subtitle-copy">Let's connect! <i class="fa-solid fa-comments"></i></h3>
@@ -339,21 +343,28 @@
 						send one right back, that's a promise (with a response code 200).</p>
 					<ul class="socials">
 						<li>
-							<a href="https://www.linkedin.com/in/ishween-sehmbhi/"><i
+							<a href="https://www.linkedin.com/in/ishween-sehmbhi/" target="_blank"><i
 									class="fa-brands fa-linkedin" aria-label="LinkedIn"
-									title="LinkedIn"></i></a>
+									title="LinkedIn"></i></a><span class="sr-only">Visit My LinkedIn
+							</span>
 						</li>
 						<li>
-							<a href="https://github.com/ish-codes"><i class="fa-brands fa-github"
-									aria-label="GitHub" title="GitHub"></i></a>
+							<a href="https://github.com/ish-codes" target="_blank"><i
+									class="fa-brands fa-github" aria-label="GitHub"
+									title="GitHub"></i></a><span class="sr-only">Visit My GitHub
+							</span>
 						</li>
 						<li>
-							<a href="https://github.com/ish-codes"><i class="fa-brands fa-twitter"
-									aria-label="Twitter" title="Twitter"></i></a>
+							<a href="https://twitter.com/ish_codes" target="_blank"><i
+									class="fa-brands fa-twitter" aria-label="Twitter"
+									title="Twitter"></i></a><span class="sr-only">Visit My Twitter
+							</span>
 						</li>
 						<li>
-							<a href="https://codepen.io/ishcodes"><i class="fa-brands fa-codepen"
-									aria-label="CodePen" title="CodePen"></i></a>
+							<a href="https://codepen.io/ishcodes" target="_blank"><i
+									class="fa-brands fa-codepen" aria-label="CodePen"
+									title="CodePen"></i></a><span class="sr-only">Visit My CodePen
+							</span>
 						</li>
 						<li></li>
 					</ul>
@@ -384,7 +395,10 @@
 	<footer>
 		<p class="footer-copy">lovingly designed and built by ish</p>
 	</footer>
-
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
 </body>
 
 </html>
