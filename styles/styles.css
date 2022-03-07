@@ -361,11 +361,9 @@ header nav a:hover, header nav a:focus, header nav a:active {
           animation-delay: 4s;
 }
 .intro i {
-  font-size: 3rem;
+  font-size: 2rem;
   -webkit-animation: chevron-bounce 0.75s infinite ease-in-out alternate;
           animation: chevron-bounce 0.75s infinite ease-in-out alternate;
-  position: absolute;
-  bottom: 10vh;
 }
 
 .about {
@@ -515,6 +513,11 @@ header nav a:hover, header nav a:focus, header nav a:active {
 
 .footer-copy {
   font-weight: 500;
+  margin: 0;
+  padding: 20px 0 20px;
+}
+.footer-copy i {
+  font-size: 1.2rem;
 }
 
 @-webkit-keyframes highlight-effect {
@@ -710,6 +713,10 @@ section:not(.projects) {
   width: 100%;
   padding: 2%;
   border-radius: 5px;
+}
+
+footer {
+  background-color: #e6d6ff;
 }
 
 footer {
