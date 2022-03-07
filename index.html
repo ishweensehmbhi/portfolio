@@ -5,33 +5,40 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- css stylesheet  -->
 	<link rel="stylesheet" href="./styles/styles.css">
+	<!-- google fonts  -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Montserrat:wght@400;500;600;700&family=Mulish:ital,wght@0,400;0,700;1,900&family=Nanum+Pen+Script&display=swap"
 		rel="stylesheet">
+	<!-- devicon  -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+	<!-- aos  -->
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-	<script src="https://kit.fontawesome.com/26a5b5576c.js" crossorigin="anonymous"></script>
+	<!-- favicon  -->
 	<link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
 	<link rel="manifest" href="./assets/site.webmanifest">
+	<!-- fontawesome  -->
+	<script src="https://kit.fontawesome.com/26a5b5576c.js" crossorigin="anonymous"></script>
 	<title>Ishween Sehmbhi | Portfolio</title>
 </head>
 
 <body>
 	<header>
-		<h1><span>Hi, I'm </span>Ishween</h1>
-		<p>A front-end web developer.</p>
+		<span>Hi, my name is </span>
+		<h1>Ishween</h1>
+		<p>and I'm a developer.</p>
 		<div class="avatar">
 			<img class="header-img" src="./assets/avatar-light.svg" alt="ishween's avatar">
 		</div>
 		<nav role="navigation">
 			<ul>
+				<li><a href="#">hide</a></li>
 				<li><a href="#top">Intro</a></li>
 				<li><a href="#about">About</a></li>
-				<li><a href="#skills">Skills</a></li>
 				<li><a href="#projects">Projects</a></li>
 				<li><a href="#contact">Contact</a></li>
 			</ul>
@@ -48,7 +55,10 @@
 					and <span class="highlight">inclusive</span>
 					digital experiences. I bring ideas to life using clean, flexible, and reusable code.
 				</p>
-				<i class="fa-solid fa-angle-down" aria-hidden="true"></i>
+				<a href="#about">
+					<span class="sr-only">Scroll to Next Section</span>
+					<i class="fa-solid fa-angle-down"></i>
+				</a>
 			</div>
 		</section>
 
@@ -98,7 +108,6 @@
 
 				<details class="accordion">
 					<summary class="handwritten">[2] (okay, and what's human factors?)</summary>
-
 					<p class="handwritten">
 						[2] Happy you asked! HFEs take into consideration human
 						capabilities and the context of operation of the equipment, machines, or processes
@@ -108,8 +117,6 @@
 							HFES</a> official definition!).
 					</p>
 				</details>
-
-
 			</div>
 		</section>
 
@@ -220,23 +227,24 @@
 							<p>A companion app for Animal Crossing: New Horizons which allows the user to
 								search
 								for bugs, fish, or sea creatures on their island based on search
-								parameters. Made with the <a href="https://acnhapi.com/">ACNH API</a>.
+								parameters. Made with the <a href="https://acnhapi.com/"
+									target="blank">ACNH API</a>.
 							</p>
 							<ul class="links">
 								<li>
 									<a href="https://acnh-critterpedia.netlify.app/" target="blank"><i
-											class="fa-solid fa-up-right-from-square project-link-icon"></i></a>
-									<span class="sr-only">Visit Live
-										Demo</span>
+											class="fa-solid fa-up-right-from-square project-link-icon"></i>
+										<span class="sr-only">Visit Live
+											Demo</span></a>
+
 								</li>
 								<li><a href="https://github.com/ish-codes/critterpedia"
 										target="blank"><i
 											class="fa-brands fa-github project-link-icon"></i>
+										<span class="sr-only">Visit GitHub
+											Repo</span>
 									</a>
-									<span class="sr-only">Visit GitHub
-										Repo</span>
 								</li>
-
 							</ul>
 						</div>
 					</div>
@@ -273,17 +281,17 @@
 								<li>
 									<a href="https://pedantic-bohr-2a4f9a.netlify.app/"
 										target="blank"><i
-											class="fa-solid fa-up-right-from-square project-link-icon"></i></a>
-									<span class="sr-only">Visit Live
-										Demo</span>
+											class="fa-solid fa-up-right-from-square project-link-icon"></i>
+										<span class="sr-only">Visit Live
+											Demo</span></a>
 								</li>
 								<li>
 									<a href="https://github.com/ish-codes/harpers-blog-psd-conversion"
 										target="blank"><i
 											class="fa-brands fa-github project-link-icon"></i>
+										<span class="sr-only">Visit GitHub
+											Repo</span>
 									</a>
-									<span class="sr-only">Visit GitHub
-										Repo</span>
 								</li>
 							</ul>
 						</div>
@@ -328,16 +336,16 @@
 							<ul class="links">
 								<li>
 									<a href="https://techjargon.netlify.app/" target="blank"><i
-											class="fa-solid fa-up-right-from-square project-link-icon"></i></a>
-									<span class="sr-only">Visit Live
-										Demo</span>
+											class="fa-solid fa-up-right-from-square project-link-icon"></i>
+										<span class="sr-only">Visit Live
+											Demo</span></a>
 								</li>
 								<li>
 									<a href="https://github.com/ish-codes/realtechorfakejargon"
 										target="blank"><i
-											class="fa-brands fa-github project-link-icon"></i></a>
-									<span class="sr-only">Visit GitHub Repo
-									</span>
+											class="fa-brands fa-github project-link-icon"></i>
+										<span class="sr-only">Visit GitHub Repo
+										</span></a>
 								</li>
 							</ul>
 						</div>
@@ -362,33 +370,33 @@
 						<li>
 							<a href="https://www.linkedin.com/in/ishween-sehmbhi/" target="_blank"><i
 									class="fa-brands fa-linkedin" aria-label="LinkedIn"
-									title="LinkedIn"></i></a><span class="sr-only">Visit My LinkedIn
-							</span>
+									title="LinkedIn"></i><span class="sr-only">Visit My LinkedIn
+								</span></a>
 						</li>
 						<li>
 							<a href="https://github.com/ish-codes" target="_blank"><i
 									class="fa-brands fa-github" aria-label="GitHub"
-									title="GitHub"></i></a><span class="sr-only">Visit My GitHub
-							</span>
+									title="GitHub"></i><span class="sr-only">Visit My GitHub
+								</span></a>
 						</li>
 						<li>
 							<a href="https://twitter.com/ish_codes" target="_blank"><i
 									class="fa-brands fa-twitter" aria-label="Twitter"
-									title="Twitter"></i></a><span class="sr-only">Visit My Twitter
-							</span>
+									title="Twitter"></i><span class="sr-only">Visit My Twitter
+								</span></a>
 						</li>
 						<li>
 							<a href="https://codepen.io/ishcodes" target="_blank"><i
 									class="fa-brands fa-codepen" aria-label="CodePen"
-									title="CodePen"></i></a><span class="sr-only">Visit My CodePen
-							</span>
+									title="CodePen"></i><span class="sr-only">Visit My CodePen
+								</span></a>
 						</li>
 					</ul>
 				</div>
 				<div class="contact-form">
 					<form action="https://formspree.io/f/mnqwdype" method="POST">
 						<fieldset>
-							<legend class="sr-only">Please enter your contact info</legend>
+							<legend class="sr-only">Enter your contact info</legend>
 							<label for="name" class="sr-only">Enter Your Name</label>
 							<input type="text" name="name" id="name" placeholder="your name" required>
 
@@ -413,7 +421,12 @@
 	</footer>
 	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 	<script>
-		AOS.init();
+		if (window.matchMedia('(prefers-reduced-motion: reduce)').matches == false) {
+			AOS.init();
+		} else {
+			const myHTML = document.querySelector('html');
+			myHTML.classList.add('no-js');
+		}
 	</script>
 	<script src="./scripts/script.js"></script>
 </body>

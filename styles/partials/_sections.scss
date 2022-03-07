@@ -15,8 +15,7 @@ main {
 }
 
 section:not(.projects) {
-	min-height: 1200px;
-	height: 100vh;
+	min-block-size: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -39,7 +38,7 @@ section:not(.projects) {
 			width: calc(25% - 2%);
 			margin: 0 1% 7% 1%;
 			i {
-				font-size: 2.5rem;
+				font-size: 2.8rem;
 				color: $lightAccentColorQuaternary;
 			}
 			p {

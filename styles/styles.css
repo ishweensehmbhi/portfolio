@@ -333,8 +333,8 @@ header nav a:hover, header nav a:focus, header nav a:active {
 }
 .intro .big-copy {
   font-family: "Montserrat", sans-serif;
-  font-size: 2rem;
-  line-height: 40px;
+  font-size: 2.4rem;
+  line-height: 50px;
 }
 .intro .highlight {
   -webkit-animation: highlight-effect 1.5s;
@@ -360,10 +360,11 @@ header nav a:hover, header nav a:focus, header nav a:active {
   -webkit-animation-delay: 4s;
           animation-delay: 4s;
 }
-.intro i {
+.intro a:hover, .intro a:focus {
+  color: #afa8ba;
+}
+.intro a i {
   font-size: 2rem;
-  -webkit-animation: chevron-bounce 0.75s infinite ease-in-out alternate;
-          animation: chevron-bounce 0.75s infinite ease-in-out alternate;
 }
 
 .about {
@@ -586,8 +587,7 @@ main {
 }
 
 section:not(.projects) {
-  min-height: 1200px;
-  height: 100vh;
+  min-block-size: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -626,7 +626,7 @@ section:not(.projects) {
   margin: 0 1% 7% 1%;
 }
 .skills ul li i {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   color: #afa8ba;
 }
 .skills ul li p {
@@ -733,6 +733,11 @@ footer {
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
+  }
+
+  .intro a i {
+    -webkit-animation: chevron-bounce 0.75s infinite ease-in-out alternate;
+            animation: chevron-bounce 0.75s infinite ease-in-out alternate;
   }
 }
 @media (min-width: 1300px) {

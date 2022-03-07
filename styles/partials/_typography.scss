@@ -65,8 +65,8 @@ header {
 	text-align: center;
 	.big-copy {
 		font-family: $headingFont;
-		font-size: 2rem;
-		line-height: 40px;
+		font-size: 2.4rem;
+		line-height: 50px;
 	}
 	.highlight {
 		animation: highlight-effect 1.5s;
@@ -90,9 +90,14 @@ header {
 		background-color: $lightAccentColorTertiary;
 		animation-delay: 4s;
 	}
-	i {
-		font-size: 2rem;
-		animation: chevron-bounce 0.75s infinite ease-in-out alternate;
+	a {
+		&:hover,
+		&:focus {
+			color: $lightAccentColorQuaternary;
+		}
+		i {
+			font-size: 2rem;
+		}
 	}
 }
 

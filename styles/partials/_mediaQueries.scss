@@ -2,6 +2,9 @@
 	html {
 		scroll-behavior: smooth;
 	}
+	.intro a i {
+		animation: chevron-bounce 0.75s infinite ease-in-out alternate;
+	}
 	// header {
 	// 	background: linear-gradient(
 	// 		-45deg,
@@ -74,6 +77,12 @@
 	.intro i {
 		position: static;
 	}
+}
+
+@media (max-width: 1000px) {
+	// section:not(.projects) {
+	// 	min-height: 1000px;
+	// }
 }
 
 @keyframes fadein {
