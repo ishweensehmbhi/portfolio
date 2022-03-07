@@ -81,9 +81,9 @@
 }
 
 @media (max-width: 1000px) {
-	// section:not(.projects) {
-	// 	min-height: 1000px;
-	// }
+	.about .wrapper {
+		text-align: center;
+	}
 }
 
 @keyframes fadein {
@@ -104,6 +104,12 @@
 	}
 	100% {
 		background-position: 0% 50%;
+	}
+}
+
+@media (max-height: 1000px) {
+	.next-section-chevron {
+		display: none;
 	}
 }
 

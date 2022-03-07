@@ -26,6 +26,7 @@ body {
 }
 
 .next-section-chevron {
+	margin-top: 10px;
 	color: $lightAccentColorQuaternary;
 	&:hover,
 	&:focus {
@@ -120,8 +121,10 @@ header {
 		font-weight: 400;
 		color: $lightLinks;
 		a {
+			transition: all 0.25s ease-in;
 			background-color: $lightAccentColor;
 			color: $lightText;
+			border-radius: 10px;
 			&:visited {
 				color: $lightText;
 			}
@@ -129,14 +132,7 @@ header {
 			&:focus,
 			&:active {
 				background-color: $lightAccentColorSecondary;
-				animation: highlight-effect 0.5s;
-				animation-fill-mode: forwards;
-				background-size: 200%;
-				background-image: linear-gradient(
-					to right,
-					$lightAccentColor 50%,
-					transparent 50%
-				);
+				transition: all 0.25s ease-in;
 			}
 		}
 	}
@@ -145,6 +141,14 @@ header {
 	}
 	summary {
 		cursor: pointer;
+		transition: all 0.5s ease-in;
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: $lightAccentColor;
+			transition: all 0.5s ease-in;
+			border-radius: 10px;
+		}
 	}
 }
 
@@ -185,7 +189,7 @@ header {
 		.project-link-icon {
 			padding: 2% 5%;
 			border: 2px solid $lightAccentColorQuaternary;
-			border-radius: 5px;
+			border-radius: 10px;
 			font-size: 2rem;
 			background-color: $lightBackground;
 			transition: all 0.5s ease;
