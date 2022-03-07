@@ -2,6 +2,19 @@
 	html {
 		scroll-behavior: smooth;
 	}
+	// header {
+	// 	background: linear-gradient(
+	// 		-45deg,
+	// 		#e6d6ff,
+	// 		#ffcef8,
+	// 		#ffc8da,
+	// 		#ffcdae,
+	// 		#ffdf84,
+	// 		#f9f871
+	// 	);
+	// 	background-size: 400% 400%;
+	// 	animation: gradient 5s ease infinite;
+	// }
 }
 
 @media (min-width: 1300px) {
@@ -22,6 +35,12 @@
 			.image-container {
 				width: 100%;
 			}
+		}
+		.image-container {
+			order: 1;
+		}
+		.text-container {
+			order: 2;
 		}
 	}
 }
@@ -49,6 +68,18 @@
 		opacity: 1;
 	}
 }
+
+/*@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}*/
 
 body {
 	animation: fadein 2s;

@@ -11,6 +11,10 @@ body {
 	font-family: $bodyFont;
 	line-height: 1.875rem;
 	color: $lightText;
+	a {
+		color: $lightLinks;
+		font-weight: bold;
+	}
 }
 
 header {
@@ -24,7 +28,7 @@ header {
 			font-size: 1rem;
 			line-height: 0.25;
 			font-weight: 400;
-			padding-bottom: 2%;
+			padding-bottom: 6%;
 		}
 	}
 	p {
@@ -32,7 +36,6 @@ header {
 	}
 	nav {
 		a {
-			color: $lightLinks;
 			font-family: $headingFont;
 			font-weight: 600;
 			letter-spacing: 1px;
@@ -135,6 +138,7 @@ header {
 }
 
 .projects {
+	text-align: center;
 	h3,
 	p,
 	ul,
@@ -143,7 +147,41 @@ header {
 		padding: 0;
 	}
 	h3 {
-		margin-bottom: 3%;
+		text-transform: uppercase;
+		filter: drop-shadow(1px 1px 3px $lightAccentColorSecondary);
+		margin-bottom: 2.5%;
+	}
+	p {
+		margin-bottom: 4%;
+	}
+	a {
+		transition: all 0.5s ease;
+		&:hover {
+			color: $lightAccentColorQuaternary;
+			transition: all 0.5s ease;
+		}
+	}
+	.stack {
+		padding: 3%;
+		.stack-icon {
+			font-size: 2.2rem;
+			color: $lightAccentColorQuaternary;
+		}
+	}
+	.project-link-icon {
+		padding: 2% 8%;
+		border: 2px solid $lightAccentColorQuaternary;
+		border-radius: 8%;
+		font-size: 2rem;
+		transition: all 0.5s ease;
+		background-color: $lightBackground;
+		&:hover {
+			color: $lightAccentColorSecondary;
+			transition: all 0.5s ease;
+			transform: translateY(-6px);
+			background-color: $lightAccentColorQuaternary;
+			box-shadow: 0px 15px 20px $lightAccentColorSecondary;
+		}
 	}
 }
 
