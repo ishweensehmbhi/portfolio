@@ -80,6 +80,7 @@ header {
 		font-size: 2.4rem;
 		line-height: 50px;
 	}
+	// Highlighting animation
 	.highlight {
 		animation: highlight-effect 1.5s;
 		animation-fill-mode: forwards;
@@ -104,6 +105,7 @@ header {
 	}
 }
 
+// About section typography
 .about {
 	text-align: left;
 	.subtitle-copy {
@@ -122,7 +124,7 @@ header {
 		color: $lightLinks;
 		a {
 			transition: all 0.25s ease-in;
-			background-color: $lightAccentColor;
+			background-color: $lightAccentColorTertiary;
 			color: $lightText;
 			border-radius: 10px;
 			&:visited {
@@ -145,7 +147,7 @@ header {
 		&:hover,
 		&:focus,
 		&:active {
-			background-color: $lightAccentColor;
+			background-color: $lightAccentColorTertiary;
 			transition: all 0.5s ease-in;
 			border-radius: 10px;
 		}
@@ -185,22 +187,32 @@ header {
 			color: $lightAccentColorQuaternary;
 		}
 	}
+	a {
+		transition: all 0.25s ease-in;
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: $lightAccentColorSecondary;
+			transition: all 0.25s ease-in;
+		}
+	}
+	.links {
+		margin: 2.5% 0;
+	}
 	li {
-		.project-link-icon {
-			padding: 2% 5%;
+		a {
+			padding: 2% 30px;
 			border: 2px solid $lightAccentColorQuaternary;
 			border-radius: 10px;
 			font-size: 2rem;
+			color: $lightLinks;
 			background-color: $lightBackground;
-			transition: all 0.5s ease;
+			transition: background-color 0.5s ease, color 0.5s ease;
 			&:focus,
-			&:hover,
-			&:active {
+			&:hover {
 				color: $lightAccentColorSecondary;
-				transform: translateY(-6px);
 				background-color: $lightAccentColorQuaternary;
-				box-shadow: 0px 15px 20px $lightAccentColorSecondary;
-				transition: all 0.5s ease;
+				transition: background-color 0.5s ease, color 0.5s ease;
 			}
 		}
 	}

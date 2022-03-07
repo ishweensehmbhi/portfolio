@@ -393,7 +393,7 @@ header nav a:hover, header nav a:focus, header nav a:active {
 .about .handwritten a {
   -webkit-transition: all 0.25s ease-in;
   transition: all 0.25s ease-in;
-  background-color: #e6d6ff;
+  background-color: #ffdf84;
   color: #000;
   border-radius: 10px;
 }
@@ -414,7 +414,7 @@ header nav a:hover, header nav a:focus, header nav a:active {
   transition: all 0.5s ease-in;
 }
 .about summary:hover, .about summary:focus, .about summary:active {
-  background-color: #e6d6ff;
+  background-color: #ffdf84;
   -webkit-transition: all 0.5s ease-in;
   transition: all 0.5s ease-in;
   border-radius: 10px;
@@ -455,24 +455,33 @@ header nav a:hover, header nav a:focus, header nav a:active {
   font-size: 2.2rem;
   color: #afa8ba;
 }
-.projects li .project-link-icon {
-  padding: 2% 5%;
+.projects a {
+  -webkit-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in;
+}
+.projects a:hover, .projects a:focus, .projects a:active {
+  background-color: #ffc8da;
+  -webkit-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in;
+}
+.projects .links {
+  margin: 2.5% 0;
+}
+.projects li a {
+  padding: 2% 30px;
   border: 2px solid #afa8ba;
   border-radius: 10px;
   font-size: 2rem;
+  color: #707070;
   background-color: #f8f8f8;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: background-color 0.5s ease, color 0.5s ease;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
-.projects li .project-link-icon:focus, .projects li .project-link-icon:hover, .projects li .project-link-icon:active {
+.projects li a:focus, .projects li a:hover {
   color: #ffc8da;
-  -webkit-transform: translateY(-6px);
-          transform: translateY(-6px);
   background-color: #afa8ba;
-  -webkit-box-shadow: 0px 15px 20px #ffc8da;
-          box-shadow: 0px 15px 20px #ffc8da;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: background-color 0.5s ease, color 0.5s ease;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .contact ul {
@@ -648,6 +657,8 @@ section {
 }
 .projects article {
   background-color: #fff;
+  -webkit-filter: drop-shadow(0px 2px 2px #e6d6ff);
+          filter: drop-shadow(0px 2px 2px #e6d6ff);
   border-radius: 15px;
   padding: 1.5%;
   margin-bottom: 3.5%;
