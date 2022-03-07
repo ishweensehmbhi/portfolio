@@ -312,7 +312,7 @@ header nav a {
   -webkit-transition: background-color ease-in-out 0.35s;
   transition: background-color ease-in-out 0.35s;
 }
-header nav a:hover, header nav a:focus {
+header nav a:hover, header nav a:focus, header nav a:active {
   background-color: #e6d6ff;
   -webkit-transition: background-color cubic-bezier(0.165, 0.84, 0.44, 1) 0.35s;
   transition: background-color cubic-bezier(0.165, 0.84, 0.44, 1) 0.35s;
@@ -324,6 +324,7 @@ header nav a:hover, header nav a:focus {
   -webkit-filter: drop-shadow(2px 2px 3px #e6d6ff);
           filter: drop-shadow(2px 2px 3px #e6d6ff);
   margin-bottom: 5%;
+  text-align: center;
 }
 
 .intro {
@@ -392,7 +393,7 @@ header nav a:hover, header nav a:focus {
 .about .handwritten a:visited {
   color: #000;
 }
-.about .handwritten a:hover, .about .handwritten a:focus {
+.about .handwritten a:hover, .about .handwritten a:focus, .about .handwritten a:active {
   background-color: #ffc8da;
   -webkit-animation: highlight-effect 0.5s;
           animation: highlight-effect 0.5s;
@@ -429,7 +430,7 @@ header nav a:hover, header nav a:focus {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-.projects a:hover {
+.projects a:hover, .projects a:focus, .projects a:active {
   color: #afa8ba;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -441,28 +442,81 @@ header nav a:hover, header nav a:focus {
   font-size: 2.2rem;
   color: #afa8ba;
 }
-.projects .project-link-icon {
-  padding: 2% 8%;
+.projects li .project-link-icon {
+  padding: 2% 5%;
   border: 2px solid #afa8ba;
-  border-radius: 8%;
+  border-radius: 5px;
   font-size: 2rem;
+  background-color: #f8f8f8;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  background-color: #f8f8f8;
 }
-.projects .project-link-icon:hover {
+.projects li .project-link-icon:focus, .projects li .project-link-icon:hover, .projects li .project-link-icon:active {
+  color: #ffc8da;
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+  background-color: #afa8ba;
+  -webkit-box-shadow: 0px 15px 20px #ffc8da;
+          box-shadow: 0px 15px 20px #ffc8da;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.contact ul {
+  list-style: none;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 3.5% 0 3.5%;
+}
+.contact ul li {
+  display: inline;
+}
+.contact ul li a {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.contact ul li a:focus, .contact ul li a:hover, .contact ul li a:active {
+  color: #afa8ba;
+  -webkit-filter: drop-shadow(0px 15px 20px #ffc8da);
+          filter: drop-shadow(0px 15px 20px #ffc8da);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.contact .contact-info i {
+  font-size: 2.2rem;
+}
+.contact .contact-info h3 i {
+  font-size: 2rem;
+}
+.contact button {
+  font-weight: bold;
+  border: 2px solid #e6d6ff;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.contact button:hover, .contact button:focus, .contact button:active {
   color: #ffc8da;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   -webkit-transform: translateY(-6px);
           transform: translateY(-6px);
+  border-color: #afa8ba;
   background-color: #afa8ba;
   -webkit-box-shadow: 0px 15px 20px #ffc8da;
           box-shadow: 0px 15px 20px #ffc8da;
 }
 
 .footer-copy {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 @-webkit-keyframes highlight-effect {
@@ -525,6 +579,7 @@ main {
 }
 
 section:not(.projects) {
+  min-height: 1200px;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -564,7 +619,7 @@ section:not(.projects) {
   margin: 0 1% 7% 1%;
 }
 .skills ul li i {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   color: #afa8ba;
 }
 .skills ul li p {
@@ -573,11 +628,14 @@ section:not(.projects) {
   font-family: "Mulish", serif;
 }
 
+.projects {
+  margin-bottom: 50vh;
+}
 .projects article {
   background-color: #fff;
   border-radius: 1.5%;
   padding: 1.5%;
-  margin-bottom: 3%;
+  margin-bottom: 3.5%;
 }
 .projects article .flex {
   display: -webkit-box;
@@ -618,6 +676,39 @@ section:not(.projects) {
 .projects article ul li {
   display: inline;
   padding: 2%;
+}
+
+.contact .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.contact .wrapper .contact-info,
+.contact .wrapper .contact-form {
+  width: 50%;
+}
+.contact .wrapper fieldset {
+  border-color: transparent;
+}
+.contact .wrapper input,
+.contact .wrapper textarea {
+  width: 100%;
+  padding: 2%;
+  margin-bottom: 3%;
+  border-radius: 5px;
+  border: 2px solid #e6d6ff;
+}
+.contact .wrapper textarea {
+  resize: none;
+}
+.contact .wrapper button {
+  width: 100%;
+  padding: 2%;
+  border-radius: 5px;
 }
 
 footer {
@@ -661,6 +752,17 @@ footer {
         -ms-flex-order: 2;
             order: 2;
   }
+
+  .contact .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact .wrapper .contact-info,
+.contact .wrapper .contact-form {
+    width: 100%;
+  }
 }
 @media (max-width: 900px) {
   header {
@@ -674,6 +776,15 @@ footer {
 footer {
     width: 100%;
     margin-left: 0;
+  }
+
+  .skills ul li {
+    width: 31%;
+    margin: 0 1% 7% 1%;
+  }
+
+  .intro i {
+    position: static;
   }
 }
 @-webkit-keyframes fadein {
@@ -692,17 +803,28 @@ footer {
     opacity: 1;
   }
 }
-/*@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}*/
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 body {
   -webkit-animation: fadein 2s;
           animation: fadein 2s;

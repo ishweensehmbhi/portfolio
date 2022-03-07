@@ -83,8 +83,7 @@
 					systems engineering is concerned with the
 					design, improvement and installation of integrated systems of
 					people, materials, information, equipment and energy. (from
-					<a href="https://www.iise.org/details.aspx?id=282">the IISE
-						manual!</a>)
+					<a href="https://www.iise.org/details.aspx?id=716">the IISE!</a>)
 				</p>
 				<p class="handwritten">
 					[2] Human Factors is concerned with the application of what we know about people, their
@@ -177,7 +176,7 @@
 				<article class="project">
 					<div class="flex">
 						<div class="image-container">
-							<img src="./assets/critterpedia-mockup.svg"
+							<img src="./assets/critterpedia.svg"
 								alt="a browser mockup of the critterpedia project">
 						</div>
 						<div class="text-container">
@@ -270,7 +269,7 @@
 							</ul>
 						</div>
 						<div class="image-container">
-							<img src="./assets/harper-PSD-mockup.svg"
+							<img src="./assets/harper.svg"
 								alt="a browser mockup of the harper's blog project">
 						</div>
 					</div>
@@ -279,7 +278,7 @@
 				<article class="project">
 					<div class="flex">
 						<div class="image-container">
-							<img src="./assets/tech-jargon-mockup.svg"
+							<img src="./assets/tech-jargon.svg"
 								alt="a browser mockup of the tech jargon project">
 						</div>
 						<div class="text-container">
@@ -331,17 +330,59 @@
 
 		<!-- connect formspree here  -->
 		<section class="contact" id="contact">
-			<form action="" method="post">
-				<label for="email">Your Email</label>
-				<input id="email" name="email" type="email">
-				<button type="submit">Submit!</button>
-			</form>
+			<div class="wrapper">
+				<div class="contact-info">
+					<h3 class="subtitle-copy">Let's connect! <i class="fa-solid fa-comments"></i></h3>
+					<p>Feel free to use the form provided to send me a message directly, or you can
+						connect with me
+						at any of my socials linked here. Send me your funniest developer joke and I'll
+						send one right back, that's a promise (with a response code 200).</p>
+					<ul class="socials">
+						<li>
+							<a href="https://www.linkedin.com/in/ishween-sehmbhi/"><i
+									class="fa-brands fa-linkedin" aria-label="LinkedIn"
+									title="LinkedIn"></i></a>
+						</li>
+						<li>
+							<a href="https://github.com/ish-codes"><i class="fa-brands fa-github"
+									aria-label="GitHub" title="GitHub"></i></a>
+						</li>
+						<li>
+							<a href="https://github.com/ish-codes"><i class="fa-brands fa-twitter"
+									aria-label="Twitter" title="Twitter"></i></a>
+						</li>
+						<li>
+							<a href="https://codepen.io/ishcodes"><i class="fa-brands fa-codepen"
+									aria-label="CodePen" title="CodePen"></i></a>
+						</li>
+						<li></li>
+					</ul>
+				</div>
+				<div class="contact-form">
+					<form action="https://formspree.io/f/mnqwdype" method="POST">
+						<fieldset>
+							<legend class="sr-only">Please enter your contact info</legend>
+							<label for="name" class="sr-only">Enter Your Name</label>
+							<input type="text" name="name" id="name" placeholder="your name" required>
+
+							<label for="email" class="sr-only">Enter Your Email</label>
+							<input id="email" name="email" type="email" placeholder="your email" required>
+
+							<label for="textarea" class="sr-only">Enter Your Message</label>
+							<textarea name="textarea" id="textarea" placeholder="your message" rows="6"
+								cols="30" required></textarea>
+							<button type="submit">send message <i class="fa-solid fa-paper-plane"></i>
+							</button>
+						</fieldset>
+					</form>
+				</div>
+			</div>
 		</section>
 
 	</main>
 
 	<footer>
-		<p class="footer-copy">lovingly designed 🎨 and built 🔨 by ishween sehmbhi</p>
+		<p class="footer-copy">lovingly designed and built by ish</p>
 	</footer>
 
 </body>

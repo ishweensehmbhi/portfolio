@@ -43,6 +43,15 @@
 			order: 2;
 		}
 	}
+	.contact {
+		.wrapper {
+			flex-direction: column;
+			.contact-info,
+			.contact-form {
+				width: 100%;
+			}
+		}
+	}
 }
 
 // Tablet layout
@@ -58,6 +67,13 @@
 		width: 100%;
 		margin-left: 0;
 	}
+	.skills ul li {
+		width: calc(33% - 2%);
+		margin: 0 1% 7% 1%;
+	}
+	.intro i {
+		position: static;
+	}
 }
 
 @keyframes fadein {
@@ -69,7 +85,7 @@
 	}
 }
 
-/*@keyframes gradient {
+@keyframes gradient {
 	0% {
 		background-position: 0% 50%;
 	}
@@ -79,7 +95,7 @@
 	100% {
 		background-position: 0% 50%;
 	}
-}*/
+}
 
 body {
 	animation: fadein 2s;

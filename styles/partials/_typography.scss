@@ -41,7 +41,8 @@ header {
 			letter-spacing: 1px;
 			transition: background-color ease-in-out 0.35s;
 			&:hover,
-			&:focus {
+			&:focus,
+			&:active {
 				background-color: $lightAccentColor;
 				transition: background-color
 					cubic-bezier(0.165, 0.84, 0.44, 1) 0.35s;
@@ -55,6 +56,7 @@ header {
 	text-transform: uppercase;
 	filter: drop-shadow(2px 2px 3px $lightAccentColor);
 	margin-bottom: 5%;
+	text-align: center;
 }
 
 // Intro section typography, including text animations
@@ -119,7 +121,8 @@ header {
 				color: $lightText;
 			}
 			&:hover,
-			&:focus {
+			&:focus,
+			&:active {
 				background-color: $lightAccentColorSecondary;
 				animation: highlight-effect 0.5s;
 				animation-fill-mode: forwards;
@@ -156,7 +159,9 @@ header {
 	}
 	a {
 		transition: all 0.5s ease;
-		&:hover {
+		&:hover,
+		&:focus,
+		&:active {
 			color: $lightAccentColorQuaternary;
 			transition: all 0.5s ease;
 		}
@@ -168,17 +173,70 @@ header {
 			color: $lightAccentColorQuaternary;
 		}
 	}
-	.project-link-icon {
-		padding: 2% 8%;
-		border: 2px solid $lightAccentColorQuaternary;
-		border-radius: 8%;
-		font-size: 2rem;
+	li {
+		.project-link-icon {
+			padding: 2% 5%;
+			border: 2px solid $lightAccentColorQuaternary;
+			border-radius: 5px;
+			font-size: 2rem;
+			background-color: $lightBackground;
+			transition: all 0.5s ease;
+			&:focus,
+			&:hover,
+			&:active {
+				color: $lightAccentColorSecondary;
+				transform: translateY(-6px);
+				background-color: $lightAccentColorQuaternary;
+				box-shadow: 0px 15px 20px $lightAccentColorSecondary;
+				transition: all 0.5s ease;
+			}
+		}
+	}
+}
+
+.contact {
+	ul {
+		list-style: none;
+		padding: 0;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		margin: 3.5% 0 3.5%;
+		li {
+			display: inline;
+			a {
+				transition: all 0.5s ease;
+				&:focus,
+				&:hover,
+				&:active {
+					color: $lightAccentColorQuaternary;
+					filter: drop-shadow(
+						0px 15px 20px $lightAccentColorSecondary
+					);
+					transition: all 0.5s ease;
+				}
+			}
+		}
+	}
+	.contact-info {
+		i {
+			font-size: 2.2rem;
+		}
+		h3 i {
+			font-size: 2rem;
+		}
+	}
+	button {
+		font-weight: bold;
+		border: 2px solid $lightAccentColor;
 		transition: all 0.5s ease;
-		background-color: $lightBackground;
-		&:hover {
+		&:hover,
+		&:focus,
+		&:active {
 			color: $lightAccentColorSecondary;
 			transition: all 0.5s ease;
 			transform: translateY(-6px);
+			border-color: $lightAccentColorQuaternary;
 			background-color: $lightAccentColorQuaternary;
 			box-shadow: 0px 15px 20px $lightAccentColorSecondary;
 		}
@@ -186,7 +244,7 @@ header {
 }
 
 .footer-copy {
-	font-weight: 600;
+	font-weight: 500;
 }
 
 @keyframes highlight-effect {
