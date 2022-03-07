@@ -136,6 +136,12 @@ header {
 	i {
 		color: $lightAccentColorTertiary;
 	}
+	details {
+		text-align: center;
+	}
+	summary {
+		cursor: pointer;
+	}
 }
 
 .projects {

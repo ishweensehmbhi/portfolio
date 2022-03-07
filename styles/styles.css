@@ -404,6 +404,12 @@ header nav a:hover, header nav a:focus, header nav a:active {
 .about i {
   color: #ffdf84;
 }
+.about details {
+  text-align: center;
+}
+.about summary {
+  cursor: pointer;
+}
 
 .projects {
   text-align: center;
