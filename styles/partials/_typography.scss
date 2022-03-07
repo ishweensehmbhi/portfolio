@@ -17,6 +17,25 @@ body {
 	}
 }
 
+.subtitle-copy {
+	font-weight: bold;
+	text-transform: uppercase;
+	filter: drop-shadow(2px 2px 3px $lightAccentColor);
+	margin-bottom: 5%;
+	text-align: center;
+}
+
+.next-section-chevron {
+	color: $lightAccentColorQuaternary;
+	&:hover,
+	&:focus {
+		color: $lightAccentColorSecondary;
+	}
+	i {
+		font-size: 3em;
+	}
+}
+
 header {
 	text-align: center;
 	h1 {
@@ -51,14 +70,6 @@ header {
 	}
 }
 
-.subtitle-copy {
-	font-weight: bold;
-	text-transform: uppercase;
-	filter: drop-shadow(2px 2px 3px $lightAccentColor);
-	margin-bottom: 5%;
-	text-align: center;
-}
-
 // Intro section typography, including text animations
 .intro {
 	position: relative;
@@ -89,15 +100,6 @@ header {
 	.highlight:nth-of-type(3) {
 		background-color: $lightAccentColorTertiary;
 		animation-delay: 4s;
-	}
-	a {
-		&:hover,
-		&:focus {
-			color: $lightAccentColorQuaternary;
-		}
-		i {
-			font-size: 2rem;
-		}
 	}
 }
 
@@ -137,9 +139,6 @@ header {
 				);
 			}
 		}
-	}
-	i {
-		color: $lightAccentColorTertiary;
 	}
 	details {
 		text-align: center;

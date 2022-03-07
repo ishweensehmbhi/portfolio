@@ -287,6 +287,25 @@ body a {
   font-weight: bold;
 }
 
+.subtitle-copy {
+  font-weight: bold;
+  text-transform: uppercase;
+  -webkit-filter: drop-shadow(2px 2px 3px #e6d6ff);
+          filter: drop-shadow(2px 2px 3px #e6d6ff);
+  margin-bottom: 5%;
+  text-align: center;
+}
+
+.next-section-chevron {
+  color: #afa8ba;
+}
+.next-section-chevron:hover, .next-section-chevron:focus {
+  color: #ffc8da;
+}
+.next-section-chevron i {
+  font-size: 3em;
+}
+
 header {
   text-align: center;
 }
@@ -316,15 +335,6 @@ header nav a:hover, header nav a:focus, header nav a:active {
   background-color: #e6d6ff;
   -webkit-transition: background-color cubic-bezier(0.165, 0.84, 0.44, 1) 0.35s;
   transition: background-color cubic-bezier(0.165, 0.84, 0.44, 1) 0.35s;
-}
-
-.subtitle-copy {
-  font-weight: bold;
-  text-transform: uppercase;
-  -webkit-filter: drop-shadow(2px 2px 3px #e6d6ff);
-          filter: drop-shadow(2px 2px 3px #e6d6ff);
-  margin-bottom: 5%;
-  text-align: center;
 }
 
 .intro {
@@ -359,12 +369,6 @@ header nav a:hover, header nav a:focus, header nav a:active {
   background-color: #ffdf84;
   -webkit-animation-delay: 4s;
           animation-delay: 4s;
-}
-.intro a:hover, .intro a:focus {
-  color: #afa8ba;
-}
-.intro a i {
-  font-size: 2rem;
 }
 
 .about {
@@ -401,9 +405,6 @@ header nav a:hover, header nav a:focus, header nav a:active {
   background-size: 200%;
   background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #e6d6ff), color-stop(50%, transparent));
   background-image: linear-gradient(to right, #e6d6ff 50%, transparent 50%);
-}
-.about i {
-  color: #ffdf84;
 }
 .about details {
   text-align: center;
@@ -586,7 +587,7 @@ main {
   max-width: 1200px;
 }
 
-section:not(.projects) {
+section {
   min-block-size: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -735,7 +736,7 @@ footer {
     scroll-behavior: smooth;
   }
 
-  .intro a i {
+  .next-section-chevron {
     -webkit-animation: chevron-bounce 0.75s infinite ease-in-out alternate;
             animation: chevron-bounce 0.75s infinite ease-in-out alternate;
   }

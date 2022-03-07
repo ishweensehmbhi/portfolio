@@ -14,7 +14,7 @@ main {
 	max-width: 1200px;
 }
 
-section:not(.projects) {
+section {
 	min-block-size: 100vh;
 	display: flex;
 	flex-direction: column;
