@@ -54,13 +54,13 @@ section:not(.projects) {
 	article {
 		background-color: $lightHeader;
 		border-radius: 1.5%;
-		padding: 3%;
+		padding: 1.5%;
 		margin-bottom: 3%;
 		.flex {
 			display: flex;
 			flex-direction: row;
 			.image-container {
-				width: 60%;
+				width: 50%;
 			}
 			.image-container {
 				img {
@@ -74,7 +74,7 @@ section:not(.projects) {
 				display: flex;
 				flex-direction: column;
 				justify-content: flex-start;
-				width: 40%;
+				width: 50%;
 			}
 		}
 		ul {
@@ -83,7 +83,6 @@ section:not(.projects) {
 			li {
 				display: inline;
 				padding: 2%;
-				border: 1px solid black;
 			}
 		}
 	}

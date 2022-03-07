@@ -4,13 +4,25 @@
 	}
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1300px) {
 	header {
 		width: 400px;
 	}
 	main,
 	footer {
 		margin-left: 400px;
+	}
+}
+
+@media (max-width: 1300px) {
+	.projects {
+		article .flex {
+			flex-direction: column;
+			.text-container,
+			.image-container {
+				width: 100%;
+			}
+		}
 	}
 }
 
@@ -39,5 +51,5 @@
 }
 
 body {
-	animation: fadein 1s;
+	animation: fadein 2s;
 }

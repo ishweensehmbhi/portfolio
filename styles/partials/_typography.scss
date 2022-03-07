@@ -47,6 +47,13 @@ header {
 	}
 }
 
+.subtitle-copy {
+	font-weight: bold;
+	text-transform: uppercase;
+	filter: drop-shadow(2px 2px 3px $lightAccentColor);
+	margin-bottom: 5%;
+}
+
 // Intro section typography, including text animations
 .intro {
 	position: relative;
@@ -68,12 +75,15 @@ header {
 	}
 	.highlight:nth-of-type(1) {
 		background-color: $lightAccentColor;
+		animation-delay: 1s;
 	}
 	.highlight:nth-of-type(2) {
 		background-color: $lightAccentColorSecondary;
+		animation-delay: 2.5s;
 	}
 	.highlight:nth-of-type(3) {
 		background-color: $lightAccentColorTertiary;
+		animation-delay: 4s;
 	}
 	i {
 		font-size: 3rem;
@@ -81,13 +91,6 @@ header {
 		position: absolute;
 		bottom: 10vh;
 	}
-}
-
-.subtitle-copy {
-	font-weight: bold;
-	text-transform: uppercase;
-	filter: drop-shadow(2px 2px 3px $lightAccentColor);
-	margin-bottom: 5%;
 }
 
 .about {
@@ -108,6 +111,7 @@ header {
 		color: $lightLinks;
 		a {
 			background-color: $lightAccentColor;
+			color: $lightText;
 			&:visited {
 				color: $lightText;
 			}
@@ -127,6 +131,19 @@ header {
 	}
 	i {
 		color: $lightAccentColorTertiary;
+	}
+}
+
+.projects {
+	h3,
+	p,
+	ul,
+	li {
+		margin: 0;
+		padding: 0;
+	}
+	h3 {
+		margin-bottom: 3%;
 	}
 }
 
