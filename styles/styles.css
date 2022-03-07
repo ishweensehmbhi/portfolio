@@ -627,7 +627,7 @@ section:not(.projects) {
 }
 
 .projects {
-  margin-bottom: 50vh;
+  margin-bottom: 1vh;
 }
 .projects article {
   background-color: #fff;
@@ -674,6 +674,9 @@ section:not(.projects) {
 .projects article ul li {
   display: inline;
   padding: 2%;
+}
+.projects article:last-child {
+  margin-bottom: 0;
 }
 
 .contact .wrapper {
