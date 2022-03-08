@@ -5,11 +5,22 @@ main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	position: relative;
+	&::after {
+		content: "";
+		background-image: url("../assets/header-deco.png");
+		width: 100%;
+		position: absolute;
+		z-index: 0;
+		height: 600px;
+		background-repeat: none;
+	}
 }
 
 .intro {
 	div.avatar {
 		width: 200px;
+		z-index: 10;
 		img {
 			border-radius: 50%;
 		}
@@ -131,8 +142,4 @@ section {
 			border-radius: 5px;
 		}
 	}
-}
-
-footer {
-	background-color: $lightAccentColor;
 }

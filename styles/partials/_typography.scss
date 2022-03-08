@@ -69,15 +69,17 @@ header {
 			display: inline-block;
 			width: 100%;
 			border-radius: 15px;
-			border: 3px solid $lightAccentColor;
+			border: 1px solid $lightAccentColorQuaternary;
+			background-color: $lightAccentColor;
 			font-family: $bodyFont;
 			font-weight: 600;
-			font-size: 1.3rem;
+			font-size: 1.2rem;
 			transition: background-color ease-in-out 0.35s;
 			&:hover,
 			&:focus,
 			&:active {
-				background-color: $lightAccentColor;
+				background-color: $lightAccentColorSecondary;
+				color: white;
 				transition: background-color
 					cubic-bezier(0.165, 0.84, 0.44, 1) 0.35s;
 			}
