@@ -18,6 +18,9 @@ main {
 }
 
 .intro {
+	p {
+		z-index: 10;
+	}
 	div.avatar {
 		width: 200px;
 		z-index: 10;
@@ -115,6 +118,7 @@ section {
 }
 
 .contact {
+	z-index: 10;
 	.wrapper {
 		display: flex;
 		flex-direction: row;
@@ -131,7 +135,7 @@ section {
 			padding: 2%;
 			margin-bottom: 3%;
 			border-radius: 5px;
-			border: 2px solid $lightAccentColor;
+			border: 3px solid $lightAccentColor;
 		}
 		textarea {
 			resize: none;
@@ -141,5 +145,21 @@ section {
 			padding: 2%;
 			border-radius: 5px;
 		}
+	}
+}
+
+a .back-to-top {
+	color: #854c5a;
+	display: none;
+	position: fixed;
+	bottom: 6vh;
+	left: 3vw;
+	z-index: 30;
+	font-size: 4rem;
+	transition: all ease-in 0.5s;
+	&:hover,
+	&:focus,
+	&:active {
+		color: $lightAccentColor;
 	}
 }

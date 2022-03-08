@@ -295,7 +295,7 @@ body a {
 }
 
 .next-section-chevron {
-  margin-top: 10px;
+  margin-top: 15px;
   color: #afa8ba;
 }
 .next-section-chevron:hover, .next-section-chevron:focus {
@@ -548,6 +548,7 @@ header nav a:hover, header nav a:focus, header nav a:active {
   font-weight: 500;
   margin: 0;
   padding: 20px 0 20px;
+  font-size: 1.6rem;
 }
 .footer-copy i {
   font-size: 1.2rem;
@@ -608,6 +609,9 @@ main::after {
   background-repeat: none;
 }
 
+.intro p {
+  z-index: 10;
+}
 .intro div.avatar {
   width: 200px;
   z-index: 10;
@@ -736,6 +740,9 @@ section {
   margin-bottom: 0;
 }
 
+.contact {
+  z-index: 10;
+}
 .contact .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -758,7 +765,7 @@ section {
   padding: 2%;
   margin-bottom: 3%;
   border-radius: 5px;
-  border: 2px solid #e6d6ff;
+  border: 3px solid #e6d6ff;
 }
 .contact .wrapper textarea {
   resize: none;
@@ -767,6 +774,21 @@ section {
   width: 100%;
   padding: 2%;
   border-radius: 5px;
+}
+
+a .back-to-top {
+  color: #854c5a;
+  display: none;
+  position: fixed;
+  bottom: 6vh;
+  left: 3vw;
+  z-index: 30;
+  font-size: 4rem;
+  -webkit-transition: all ease-in 0.5s;
+  transition: all ease-in 0.5s;
+}
+a .back-to-top:hover, a .back-to-top:focus, a .back-to-top:active {
+  color: #e6d6ff;
 }
 
 footer {
@@ -853,8 +875,8 @@ footer {
 @media (max-width: 900px) {
   header {
     width: 100%;
-    height: auto;
-    position: fixed;
+    position: static;
+    top: 0;
     z-index: 0;
   }
 
@@ -872,10 +894,31 @@ footer {
   .intro i {
     position: static;
   }
+
+  a .back-to-top {
+    display: block;
+  }
 }
 @media (max-width: 1000px) {
   .about .wrapper {
     text-align: center;
+  }
+}
+@media (max-width: 500px) {
+  .intro .big-copy {
+    font-size: 1.25rem;
+  }
+
+  .about .text-copy {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 15% 0%;
+  }
+
+  main::after {
+    display: none;
   }
 }
 @-webkit-keyframes fadein {
@@ -916,9 +959,13 @@ footer {
     background-position: 0% 50%;
   }
 }
-@media (max-height: 1000px) {
+@media (max-height: 900px) {
   .next-section-chevron {
     display: none;
+  }
+
+  section {
+    margin-top: 10%;
   }
 }
 body {

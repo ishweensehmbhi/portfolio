@@ -61,8 +61,8 @@
 @media (max-width: 900px) {
 	header {
 		width: 100%;
-		height: auto;
-		position: fixed;
+		position: static;
+		top: 0;
 		z-index: 0;
 	}
 	main,
@@ -77,11 +77,33 @@
 	.intro i {
 		position: static;
 	}
+	a .back-to-top {
+		display: block;
+	}
 }
 
 @media (max-width: 1000px) {
 	.about .wrapper {
 		text-align: center;
+	}
+}
+
+@media (max-width: 500px) {
+	.intro {
+		.big-copy {
+			font-size: 1.25rem;
+		}
+	}
+	.about {
+		.text-copy {
+			font-size: 1rem;
+		}
+	}
+	section {
+		padding: 15% 0%;
+	}
+	main::after {
+		display: none;
 	}
 }
 
@@ -106,9 +128,12 @@
 	}
 }
 
-@media (max-height: 1000px) {
+@media (max-height: 900px) {
 	.next-section-chevron {
 		display: none;
+	}
+	section {
+		margin-top: 10%;
 	}
 }
 
