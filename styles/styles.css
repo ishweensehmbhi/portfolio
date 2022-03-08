@@ -775,6 +775,9 @@ section {
   padding: 2%;
   border-radius: 5px;
 }
+.contact .wrapper .gotcha {
+  display: none;
+}
 
 a .back-to-top {
   color: #854c5a;
