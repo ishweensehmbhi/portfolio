@@ -7,6 +7,15 @@ main {
 	align-items: center;
 }
 
+.intro {
+	div.avatar {
+		width: 200px;
+		img {
+			border-radius: 50%;
+		}
+	}
+}
+
 .wrapper {
 	display: flex;
 	flex-direction: column;
@@ -38,8 +47,11 @@ section {
 			width: calc(25% - 2%);
 			margin: 0 1% 7% 1%;
 			i {
-				font-size: 2.8rem;
+				font-size: 3rem;
 				color: $lightAccentColorQuaternary;
+				filter: drop-shadow(
+					2px 2px 2px $lightAccentColorTertiary
+				);
 			}
 			p {
 				font-size: 1rem;

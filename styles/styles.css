@@ -252,12 +252,6 @@ header {
   padding: 2%;
   border-right: 1px solid #ebebeb;
 }
-header div {
-  width: 50%;
-}
-header div img {
-  border-radius: 50%;
-}
 header nav ul {
   list-style: none;
   padding: 0;
@@ -439,15 +433,6 @@ header nav a:hover, header nav a:focus, header nav a:active {
 .projects p {
   margin-bottom: 4%;
 }
-.projects a {
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-.projects a:hover, .projects a:focus, .projects a:active {
-  color: #afa8ba;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
 .projects .stack {
   padding: 3%;
 }
@@ -455,12 +440,14 @@ header nav a:hover, header nav a:focus, header nav a:active {
   font-size: 2.2rem;
   color: #afa8ba;
 }
-.projects a {
+.projects p a {
   -webkit-transition: all 0.25s ease-in;
   transition: all 0.25s ease-in;
 }
-.projects a:hover, .projects a:focus, .projects a:active {
-  background-color: #ffc8da;
+.projects p a:hover, .projects p a:focus, .projects p a:active {
+  background-color: #afa8ba;
+  color: white;
+  border-radius: 3px;
   -webkit-transition: all 0.25s ease-in;
   transition: all 0.25s ease-in;
 }
@@ -507,9 +494,11 @@ header nav a:hover, header nav a:focus, header nav a:active {
   transition: all 0.5s ease;
 }
 .contact ul li a:focus, .contact ul li a:hover, .contact ul li a:active {
-  color: #ffdf84;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  color: #afa8ba;
+  -webkit-filter: drop-shadow(2px 2px 2px #ffdf84);
+          filter: drop-shadow(2px 2px 2px #ffdf84);
 }
 .contact .contact-info i {
   font-size: 2.2rem;
@@ -589,6 +578,13 @@ main {
           align-items: center;
 }
 
+.intro div.avatar {
+  width: 200px;
+}
+.intro div.avatar img {
+  border-radius: 50%;
+}
+
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -643,8 +639,10 @@ section {
   margin: 0 1% 7% 1%;
 }
 .skills ul li i {
-  font-size: 2.8rem;
+  font-size: 3rem;
   color: #afa8ba;
+  -webkit-filter: drop-shadow(2px 2px 2px #ffdf84);
+          filter: drop-shadow(2px 2px 2px #ffdf84);
 }
 .skills ul li p {
   font-size: 1rem;

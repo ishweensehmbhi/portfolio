@@ -6,10 +6,12 @@ app.apiUrl =
 app.listenForHover = () => {
 	const headerImage = document.querySelector(".header-img");
 	headerImage.addEventListener("mouseover", function () {
-		headerImage.src = "./assets/avatar-mod.svg";
+		headerImage.src = `./assets/avatar-${
+			Math.floor(Math.random() * 3) + 2
+		}.svg`;
 	});
 	headerImage.addEventListener("mouseleave", function () {
-		headerImage.src = "./assets/avatar-light.svg";
+		headerImage.src = "./assets/avatar-1.svg";
 	});
 };
 

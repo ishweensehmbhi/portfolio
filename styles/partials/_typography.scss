@@ -171,15 +171,7 @@ header {
 	p {
 		margin-bottom: 4%;
 	}
-	a {
-		transition: all 0.5s ease;
-		&:hover,
-		&:focus,
-		&:active {
-			color: $lightAccentColorQuaternary;
-			transition: all 0.5s ease;
-		}
-	}
+
 	.stack {
 		padding: 3%;
 		.stack-icon {
@@ -187,13 +179,17 @@ header {
 			color: $lightAccentColorQuaternary;
 		}
 	}
-	a {
-		transition: all 0.25s ease-in;
-		&:hover,
-		&:focus,
-		&:active {
-			background-color: $lightAccentColorSecondary;
+	p {
+		a {
 			transition: all 0.25s ease-in;
+			&:hover,
+			&:focus,
+			&:active {
+				background-color: $lightAccentColorQuaternary;
+				color: white;
+				border-radius: 3px;
+				transition: all 0.25s ease-in;
+			}
 		}
 	}
 	.links {
@@ -233,8 +229,11 @@ header {
 				&:focus,
 				&:hover,
 				&:active {
-					color: $lightAccentColorTertiary;
 					transition: all 0.5s ease;
+					color: $lightAccentColorQuaternary;
+					filter: drop-shadow(
+						2px 2px 2px $lightAccentColorTertiary
+					);
 				}
 			}
 		}
