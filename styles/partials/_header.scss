@@ -8,8 +8,12 @@ header {
 	justify-content: center;
 	align-items: center;
 	background-color: $lightHeader;
-	padding: 2%;
 	border-right: 1px solid $lightBorder;
+	.header-text-content {
+		background-color: $lightHeader;
+		border-radius: 5px 15px 5px 15px;
+		padding: 30px;
+	}
 	nav {
 		ul {
 			list-style: none;

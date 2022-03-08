@@ -23,27 +23,32 @@
 	<link rel="manifest" href="./assets/site.webmanifest">
 	<!-- fontawesome  -->
 	<script src="https://kit.fontawesome.com/26a5b5576c.js" crossorigin="anonymous"></script>
+
 	<title>Ishween Sehmbhi | Portfolio</title>
 </head>
 
 <body>
+	<!-- first column -->
 	<header>
-		<span>Hi, my name is </span>
-		<h1>Ishween</h1>
-		<p>and I'm a developer.</p>
+		<div class="header-text-content">
+			<h1><span class="handwritten top-span">Hi, my name is </span>
+				Ishween
+				<span class="handwritten bot-span">and I'm a developer.</span>
+			</h1>
 
-		<nav role="navigation">
-			<ul>
-				<li><a href="#">hide</a></li>
-				<li><a href="#top">Home</a></li>
-				<li><a href="#about">About</a></li>
-				<li><a href="#projects">Projects</a></li>
-				<li><a href="#contact">Contact</a></li>
-			</ul>
-		</nav>
+			<nav role="navigation">
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#projects">Projects</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
 	</header>
 
-	<main id="top">
+	<!-- second column  -->
+	<main id="home">
 		<!-- intro section begins  -->
 		<section class="intro" id="intro">
 			<div class="wrapper">
@@ -72,18 +77,19 @@
 					About Me ✨
 				</h2>
 				<p class="text-copy">
-					I am currently working towards graduation from the Juno College of Technology's Web
+					I leverage my multi-disciplinary background in mathematical, physical, and
+					social sciences to solve complex problems and generate creative solutions which meet the
+					end user's needs. My unique skillset also allows me to collaborate on cross-functional
+					teams effectively. I'm at my happiest where I can learn from and work with people with a
+					wide range of perspectives.
+				</p>
+				<p class="text-copy">
+					I am currently working towards my Certificate from Juno College of Technology's Web
 					Development program. Prior to becoming a developer, I
 					completed
 					my Bachelor's Degree in Industrial Engineering<sup class="handwritten">[1]</sup>
 					from the University of Toronto and specialized in Human Factors Engineering<sup
 						class="handwritten">[2]</sup>.
-				</p>
-				<p class="text-copy">
-					I leverage my multi-disciplinary background in mathematical, physical, and
-					social sciences to solve complex problems and generate creative solutions which meet the
-					end user's needs. My unique skillset also allows me to collaborate on cross-functional
-					teams effectively.
 				</p>
 				<p class="text-copy">
 					In my spare time, you'll find me playing video games 🎮
@@ -105,7 +111,8 @@
 						design, improvement and installation of integrated systems of
 						people, materials, information, equipment and energy. (from
 						<a href="https://www.iise.org/details.aspx?id=716">the IISE!</a>). In short, we're
-						good at solving complex problems by bridging the technical and the creative.
+						good at modelling and solving complex problems by bridging the technical and the
+						creative.
 					</p>
 				</details>
 
@@ -436,6 +443,7 @@
 		}
 	</script>
 	<script src="./scripts/script.js"></script>
+
 </body>
 
 </html>

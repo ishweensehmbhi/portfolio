@@ -249,8 +249,12 @@ header {
       -ms-flex-align: center;
           align-items: center;
   background-color: #fff;
-  padding: 2%;
   border-right: 1px solid #ebebeb;
+}
+header .header-text-content {
+  background-color: #fff;
+  border-radius: 5px 15px 5px 15px;
+  padding: 30px;
 }
 header nav ul {
   list-style: none;
@@ -305,24 +309,38 @@ header {
   text-align: center;
 }
 header h1 {
-  font-size: 2.6rem;
+  font-size: 3.5rem;
   font-weight: 600;
-  margin: 0;
+  margin: 30px 0 30px;
+  font-family: "Nanum Pen Script", sans-serif;
 }
-header h1 span {
+header h1 .top-span {
+  padding-bottom: 7%;
+}
+header h1 .bot-span {
+  padding-top: 7%;
+}
+header h1 .top-span,
+header h1 .bot-span {
   display: block;
-  font-size: 1rem;
+  font-size: 1.3rem;
   line-height: 0.25;
   font-weight: 400;
-  padding-bottom: 6%;
 }
 header p {
   margin: 10px 0;
 }
+header nav li {
+  margin: 7% 0;
+}
 header nav a {
-  font-family: "Montserrat", sans-serif;
+  display: inline-block;
+  width: 100%;
+  border-radius: 15px;
+  border: 3px solid #e6d6ff;
+  font-family: "Mulish", serif;
   font-weight: 600;
-  letter-spacing: 1px;
+  font-size: 1.3rem;
   -webkit-transition: background-color ease-in-out 0.35s;
   transition: background-color ease-in-out 0.35s;
 }
@@ -563,7 +581,7 @@ header nav a:hover, header nav a:focus, header nav a:active {
   }
 }
 main {
-  padding: 3%;
+  padding: 0 3% 0 3%;
   margin-left: 30%;
   background: #f8f8f8;
   display: -webkit-box;
@@ -755,6 +773,13 @@ footer {
   .next-section-chevron {
     -webkit-animation: chevron-bounce 0.75s infinite ease-in-out alternate;
             animation: chevron-bounce 0.75s infinite ease-in-out alternate;
+  }
+
+  header {
+    background: linear-gradient(-45deg, #e6d6ff, #ffcef8, #ffc8da, #ffcdae, #ffdf84, #f9f871);
+    background-size: 400% 400%;
+    -webkit-animation: gradient 15s ease infinite;
+            animation: gradient 15s ease infinite;
   }
 }
 @media (min-width: 1300px) {
