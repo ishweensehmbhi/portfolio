@@ -140,3 +140,7 @@
 body {
 	animation: fadein 2s;
 }
+
+[data-aos] {
+	pointer-events: inherit !important;
+}

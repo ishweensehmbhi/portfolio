@@ -381,7 +381,7 @@
 						I promise to send one back (with a response code 200).</p>
 					<ul class="socials">
 						<li>
-							<a href="https://www.linkedin.com/in/ishween-sehmbhi/" target="_blank"><i
+							<a href="https://www.linkedin.com/in/ishween/" target="_blank"><i
 									class="fa-brands fa-linkedin" aria-label="LinkedIn"
 									title="LinkedIn"></i><span class="sr-only">Visit My LinkedIn
 								</span></a>
@@ -440,9 +440,19 @@
 	<script>
 		if (window.matchMedia('(prefers-reduced-motion: reduce)').matches == false) {
 			AOS.init();
-		} else {
+		}
+		else {
 			const myHTML = document.querySelector('html');
 			myHTML.classList.add('no-js');
+			const projectsSection = document.getElementById('projects');
+			projectsSection.removeAttribute('data-aos');
+			projectsSection.removeAttribute('data-aos-duration');
+
+			const contactsSection = document.querySelectorAll('article');
+			contactsSection.forEach((article) => {
+				article.removeAttribute('data-aos');
+				article.removeAttribute('data-aos-duration');
+			})
 		}
 	</script>
 	<script src="./scripts/script.js"></script>
