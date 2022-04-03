@@ -15,10 +15,10 @@ app.listenForHover = () => {
 	});
 };
 
-app.toggleDarkMode = () => {
-	const darkModeButton = document.querySelector(body);
-	darkModeButton.classList.toggle("dark-mode");
-};
+// app.toggleDarkMode = () => {
+// 	const darkModeButton = document.querySelector(body);
+// 	darkModeButton.classList.toggle("dark-mode");
+// };
 
 app.giveFunnyJoke = () => {
 	fetch(app.apiUrl)
