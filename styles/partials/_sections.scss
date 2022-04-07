@@ -1,6 +1,5 @@
 main {
 	padding: 0 3% 0 3%;
-	margin-left: 30%;
 	background: $lightBackground;
 	display: flex;
 	flex-direction: column;
@@ -24,6 +23,8 @@ main {
 	div.avatar {
 		width: 200px;
 		z-index: 10;
+		position: relative;
+		margin: 0 auto;
 		img {
 			border-radius: 50%;
 		}
@@ -31,10 +32,9 @@ main {
 }
 
 .wrapper {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	max-width: 1200px;
+	width: 90%;
+	margin: 0 auto;
+	max-width: 1080px;
 }
 
 section {
@@ -45,6 +45,7 @@ section {
 }
 
 .skills {
+	text-align: center;
 	h2 {
 		margin-bottom: 5%;
 	}
