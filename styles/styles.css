@@ -398,8 +398,8 @@ body a {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   background-size: 200%;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #f8f8f8), color-stop(50%, transparent));
-  background-image: linear-gradient(to right, #f8f8f8 50%, transparent 50%);
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #fff), color-stop(50%, transparent));
+  background-image: linear-gradient(to right, #fff 50%, transparent 50%);
 }
 .intro .highlight:nth-of-type(1) {
   background-color: #e6d6ff;
@@ -511,7 +511,7 @@ body a {
   border-radius: 5px;
   font-size: 2rem;
   color: #707070;
-  background-color: #f8f8f8;
+  background-color: #fff;
   -webkit-transition: background-color 0.25s ease, color 0.25s ease;
   transition: background-color 0.25s ease, color 0.25s ease;
 }
@@ -616,7 +616,7 @@ body a {
 }
 main {
   padding: 0 3% 0 3%;
-  background: #f8f8f8;
+  background: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -833,7 +833,7 @@ a .back-to-top:hover, a .back-to-top:focus, a .back-to-top:active {
 
 footer {
   position: relative;
-  background-color: #f8f8f8;
+  background-color: #fff;
   text-align: center;
   font-family: "Nanum Pen Script", sans-serif;
 }

@@ -34,16 +34,20 @@ app.listenForFocus = () => {
 // };
 
 app.giveFunnyJoke = () => {
+	const textArea = document.querySelector("textarea");
+
 	fetch(app.apiUrl)
 		.then(function (res) {
 			return res.json();
 		})
 		.then(function (jsonRes) {
 			if (jsonRes.type == "twopart") {
-				console.log(jsonRes.setup);
-				console.log(jsonRes.delivery);
+				textArea.setAttribute(
+					"placeholder",
+					jsonRes.setup + " " + jsonRes.delivery
+				);
 			} else if (jsonRes.type == "single") {
-				console.log(jsonRes.joke);
+				textArea.setAttribute("placeholder", jsonRes.joke);
 			}
 		});
 };
