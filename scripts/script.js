@@ -15,6 +15,19 @@ app.listenForHover = () => {
 	});
 };
 
+app.listenForFocus = () => {
+	const avatarContainer = document.querySelector(".avatar");
+	const headerImage = document.querySelector(".header-img");
+	avatarContainer.addEventListener("focus", function () {
+		headerImage.src = `./assets/avatar-${
+			Math.floor(Math.random() * 3) + 2
+		}.svg`;
+	});
+	avatarContainer.addEventListener("focusout", function () {
+		headerImage.src = "./assets/avatar-1.svg";
+	});
+};
+
 // app.toggleDarkMode = () => {
 // 	const darkModeButton = document.querySelector(body);
 // 	darkModeButton.classList.toggle("dark-mode");
@@ -38,6 +51,7 @@ app.giveFunnyJoke = () => {
 app.init = () => {
 	app.giveFunnyJoke();
 	app.listenForHover();
+	app.listenForFocus();
 };
 
 app.init();

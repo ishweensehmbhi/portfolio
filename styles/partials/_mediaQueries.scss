@@ -2,31 +2,23 @@
 	html {
 		scroll-behavior: smooth;
 	}
-	.next-section-chevron {
-		animation: chevron-bounce 0.75s infinite ease-in-out alternate;
+	.next-section-chevron i {
+		animation: chevron-bounce 1s infinite ease-in-out alternate;
 	}
-	// header {
-	// 	background: linear-gradient(
-	// 		-45deg,
-	// 		#e6d6ff,
-	// 		#ffcef8,
-	// 		#ffc8da,
-	// 		#ffcdae,
-	// 		#ffdf84,
-	// 		#f9f871
-	// 	);
-	// 	background-size: 400% 400%;
-	// 	animation: gradient 15s ease infinite;
-	// }
 }
 
 @media (max-width: 1300px) {
 	.projects {
-		article .flex {
-			flex-direction: column;
-			.text-container,
-			.image-container {
-				width: 100%;
+		article {
+			.image-container img {
+				width: 600px;
+			}
+			.flex {
+				flex-direction: column;
+				.text-container,
+				.image-container {
+					width: 100%;
+				}
 			}
 		}
 		.image-container {
@@ -35,6 +27,47 @@
 		.text-container {
 			order: 2;
 		}
+	}
+}
+
+// Tablet layout
+@media (max-width: 900px) {
+	.projects {
+		article {
+			.image-container img {
+				width: 100%;
+			}
+		}
+	}
+	header {
+		justify-content: center;
+		nav ul {
+			a {
+				font-size: 1rem;
+				padding: 15px;
+			}
+			li {
+				padding: 0;
+			}
+		}
+	}
+	main,
+	footer {
+		width: 100%;
+		margin-left: 0;
+	}
+	.about .skills ul li {
+		width: calc(15% - 2%);
+		margin: 0 1% 7% 1%;
+		i {
+			font-size: 1.5rem;
+		}
+	}
+	.intro i {
+		position: static;
+	}
+	a .back-to-top {
+		display: block;
 	}
 	.contact {
 		.wrapper {
@@ -47,31 +80,6 @@
 	}
 }
 
-// Tablet layout
-@media (max-width: 900px) {
-	header {
-		width: 100%;
-		position: static;
-		top: 0;
-		z-index: 0;
-	}
-	main,
-	footer {
-		width: 100%;
-		margin-left: 0;
-	}
-	.skills ul li {
-		width: calc(33% - 2%);
-		margin: 0 1% 7% 1%;
-	}
-	.intro i {
-		position: static;
-	}
-	a .back-to-top {
-		display: block;
-	}
-}
-
 @media (max-width: 1000px) {
 	.about .wrapper {
 		text-align: center;
@@ -79,6 +87,11 @@
 }
 
 @media (max-width: 500px) {
+	header nav ul a {
+		font-size: 1rem;
+		padding: 15px;
+	}
+
 	.intro {
 		.big-copy {
 			font-size: 1.25rem;
@@ -88,12 +101,16 @@
 		.text-copy {
 			font-size: 1rem;
 		}
+		.skills ul li {
+			width: calc(30% - 2%);
+			margin: 0 1% 7% 1%;
+			i {
+				font-size: 1.5rem;
+			}
+		}
 	}
 	section {
 		padding: 15% 0%;
-	}
-	main::after {
-		display: none;
 	}
 }
 

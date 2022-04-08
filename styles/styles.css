@@ -323,7 +323,7 @@ header nav ul a {
   font-size: 1.2rem;
   -webkit-transition: background-color ease-in-out 0.35s;
   transition: background-color ease-in-out 0.35s;
-  padding: 10px 10px 10px 10px;
+  padding: 10px;
 }
 header nav ul a:hover, header nav ul a:focus, header nav ul a:active {
   text-decoration: underline;
@@ -389,7 +389,7 @@ body a {
 }
 .intro .big-copy {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   line-height: 50px;
 }
 .intro .highlight {
@@ -428,7 +428,7 @@ body a {
 }
 .about .text-copy,
 .about .handwritten {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .about .handwritten {
   font-family: "Nanum Pen Script", sans-serif;
@@ -508,18 +508,18 @@ body a {
 .projects li a {
   padding: 2% 30px;
   border: 2px solid #afa8ba;
-  border-radius: 10px;
+  border-radius: 5px;
   font-size: 2rem;
   color: #707070;
   background-color: #f8f8f8;
-  -webkit-transition: background-color 0.5s ease, color 0.5s ease;
-  transition: background-color 0.5s ease, color 0.5s ease;
+  -webkit-transition: background-color 0.25s ease, color 0.25s ease;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 .projects li a:focus, .projects li a:hover {
-  color: #ffc8da;
+  color: white;
   background-color: #afa8ba;
-  -webkit-transition: background-color 0.5s ease, color 0.5s ease;
-  transition: background-color 0.5s ease, color 0.5s ease;
+  -webkit-transition: background-color 0.25s ease, color 0.25s ease;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 .contact ul {
@@ -541,12 +541,12 @@ body a {
   display: inline;
 }
 .contact ul li a {
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
 }
 .contact ul li a:focus, .contact ul li a:hover, .contact ul li a:active {
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
   color: #afa8ba;
   -webkit-filter: drop-shadow(2px 2px 2px #ffdf84);
           filter: drop-shadow(2px 2px 2px #ffdf84);
@@ -560,13 +560,13 @@ body a {
 .contact button {
   font-weight: bold;
   border: 2px solid #e6d6ff;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
 }
 .contact button:hover, .contact button:focus, .contact button:active {
   color: #ffc8da;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
   -webkit-transform: translateY(-6px);
           transform: translateY(-6px);
   border-color: #afa8ba;
@@ -639,7 +639,8 @@ main::after {
   background-repeat: none;
 }
 
-.intro p {
+.intro {
+  min-block-size: 100vh;
   z-index: 10;
 }
 .intro div.avatar {
@@ -659,7 +660,7 @@ main::after {
 }
 
 section {
-  min-block-size: 100vh;
+  padding: 100px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -672,13 +673,16 @@ section {
           justify-content: center;
 }
 
-.skills {
+.about .about-text {
+  margin-bottom: 50px;
+}
+.about .skills {
   text-align: center;
 }
-.skills h2 {
+.about .skills h2 {
   margin-bottom: 5%;
 }
-.skills ul {
+.about .skills ul {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -691,35 +695,34 @@ section {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-.skills ul li {
+.about .skills ul li {
   text-align: center;
-  width: 23%;
-  margin: 0 1% 7% 1%;
+  width: 6%;
+  margin: 0 2% 7% 2%;
 }
-.skills ul li i {
-  font-size: 3rem;
+.about .skills ul li i {
+  font-size: 2.5rem;
   color: #afa8ba;
   -webkit-filter: drop-shadow(2px 2px 2px #ffdf84);
           filter: drop-shadow(2px 2px 2px #ffdf84);
 }
-.skills ul li p {
-  font-size: 1rem;
+.about .skills ul li p {
+  font-size: 1.1rem;
+  font-family: "Nanum Pen Script", sans-serif;
   margin: 3% 0 0;
-  font-family: "Mulish", serif;
 }
 
 .projects {
   margin-bottom: 1vh;
 }
 .projects article {
-  background-color: #fff;
   -webkit-filter: drop-shadow(0px 2px 2px #e6d6ff);
           filter: drop-shadow(0px 2px 2px #e6d6ff);
-  border-radius: 15px;
+  border-radius: 5px;
   padding: 1.5%;
   margin-bottom: 3.5%;
 }
@@ -774,6 +777,7 @@ section {
 }
 
 .contact {
+  padding: 200px 0;
   z-index: 10;
 }
 .contact .wrapper {
@@ -852,12 +856,15 @@ footer::before {
     scroll-behavior: smooth;
   }
 
-  .next-section-chevron {
-    -webkit-animation: chevron-bounce 0.75s infinite ease-in-out alternate;
-            animation: chevron-bounce 0.75s infinite ease-in-out alternate;
+  .next-section-chevron i {
+    -webkit-animation: chevron-bounce 1s infinite ease-in-out alternate;
+            animation: chevron-bounce 1s infinite ease-in-out alternate;
   }
 }
 @media (max-width: 1300px) {
+  .projects article .image-container img {
+    width: 600px;
+  }
   .projects article .flex {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -878,6 +885,46 @@ footer::before {
         -ms-flex-order: 2;
             order: 2;
   }
+}
+@media (max-width: 900px) {
+  .projects article .image-container img {
+    width: 100%;
+  }
+
+  header {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header nav ul a {
+    font-size: 1rem;
+    padding: 15px;
+  }
+  header nav ul li {
+    padding: 0;
+  }
+
+  main,
+footer {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .about .skills ul li {
+    width: 13%;
+    margin: 0 1% 7% 1%;
+  }
+  .about .skills ul li i {
+    font-size: 1.5rem;
+  }
+
+  .intro i {
+    position: static;
+  }
+
+  a .back-to-top {
+    display: block;
+  }
 
   .contact .wrapper {
     -webkit-box-orient: vertical;
@@ -890,39 +937,17 @@ footer::before {
     width: 100%;
   }
 }
-@media (max-width: 900px) {
-  header {
-    width: 100%;
-    position: static;
-    top: 0;
-    z-index: 0;
-  }
-
-  main,
-footer {
-    width: 100%;
-    margin-left: 0;
-  }
-
-  .skills ul li {
-    width: 31%;
-    margin: 0 1% 7% 1%;
-  }
-
-  .intro i {
-    position: static;
-  }
-
-  a .back-to-top {
-    display: block;
-  }
-}
 @media (max-width: 1000px) {
   .about .wrapper {
     text-align: center;
   }
 }
 @media (max-width: 500px) {
+  header nav ul a {
+    font-size: 1rem;
+    padding: 15px;
+  }
+
   .intro .big-copy {
     font-size: 1.25rem;
   }
@@ -930,13 +955,16 @@ footer {
   .about .text-copy {
     font-size: 1rem;
   }
+  .about .skills ul li {
+    width: 28%;
+    margin: 0 1% 7% 1%;
+  }
+  .about .skills ul li i {
+    font-size: 1.5rem;
+  }
 
   section {
     padding: 15% 0%;
-  }
-
-  main::after {
-    display: none;
   }
 }
 @-webkit-keyframes fadein {

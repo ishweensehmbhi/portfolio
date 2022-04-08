@@ -17,9 +17,7 @@ main {
 }
 
 .intro {
-	p {
-		z-index: 10;
-	}
+	min-block-size: 100vh;
 	div.avatar {
 		width: 200px;
 		z-index: 10;
@@ -29,6 +27,7 @@ main {
 			border-radius: 50%;
 		}
 	}
+	z-index: 10;
 }
 
 .wrapper {
@@ -38,40 +37,46 @@ main {
 }
 
 section {
-	min-block-size: 100vh;
+	padding: 100px 0px;
+	// min-block-size: 50vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
 
-.skills {
-	text-align: center;
-	h2 {
-		margin-bottom: 5%;
+.about {
+	.about-text {
+		margin-bottom: 50px;
 	}
-	ul {
-		padding: 0;
-		margin: 0;
-		list-style: none;
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		li {
-			text-align: center;
-			width: calc(25% - 2%);
-			margin: 0 1% 7% 1%;
-			i {
-				font-size: 3rem;
-				color: $lightAccentColorQuaternary;
-				filter: drop-shadow(
-					2px 2px 2px $lightAccentColorTertiary
-				);
-			}
-			p {
-				font-size: 1rem;
-				margin: 3% 0 0;
-				font-family: $bodyFont;
+	.skills {
+		text-align: center;
+		h2 {
+			margin-bottom: 5%;
+		}
+		ul {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			li {
+				text-align: center;
+				width: calc(10% - 4%);
+				margin: 0 2% 7% 2%;
+				i {
+					font-size: 2.5rem;
+					color: $lightAccentColorQuaternary;
+					filter: drop-shadow(
+						2px 2px 2px $lightAccentColorTertiary
+					);
+				}
+				p {
+					font-size: 1.1rem;
+					font-family: $scribbleFont;
+					margin: 3% 0 0;
+				}
 			}
 		}
 	}
@@ -80,9 +85,8 @@ section {
 .projects {
 	margin-bottom: 1vh;
 	article {
-		background-color: $lightHeader;
 		filter: drop-shadow(0px 2px 2px $lightAccentColor);
-		border-radius: 15px;
+		border-radius: 5px;
 		padding: 1.5%;
 		margin-bottom: 3.5%;
 		.flex {
@@ -122,6 +126,7 @@ section {
 }
 
 .contact {
+	padding: 200px 0;
 	z-index: 10;
 	.wrapper {
 		display: flex;
