@@ -168,10 +168,11 @@ a .back-to-top {
 	left: 3vw;
 	z-index: 30;
 	font-size: 4rem;
-	transition: all ease-in 0.5s;
+	transition: all ease-in 0.15s;
 	&:hover,
 	&:focus,
 	&:active {
-		color: $lightAccentColor;
+		color: $lightAccentColorTertiary;
+		transition: all ease-in 0.15s;
 	}
 }

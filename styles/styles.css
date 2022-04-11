@@ -824,11 +824,13 @@ a .back-to-top {
   left: 3vw;
   z-index: 30;
   font-size: 4rem;
-  -webkit-transition: all ease-in 0.5s;
-  transition: all ease-in 0.5s;
+  -webkit-transition: all ease-in 0.15s;
+  transition: all ease-in 0.15s;
 }
 a .back-to-top:hover, a .back-to-top:focus, a .back-to-top:active {
-  color: #e6d6ff;
+  color: #ffdf84;
+  -webkit-transition: all ease-in 0.15s;
+  transition: all ease-in 0.15s;
 }
 
 footer {
