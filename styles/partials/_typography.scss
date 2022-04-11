@@ -37,63 +37,19 @@ body {
 	}
 }
 
-header {
-	text-align: center;
-	h1 {
-		font-size: 3.5rem;
-		font-weight: 600;
-		margin: 30px 0 30px;
-		font-family: $scribbleFont;
-		.top-span {
-			padding-bottom: 7%;
-		}
-		.bot-span {
-			padding-top: 7%;
-		}
-		.top-span,
-		.bot-span {
-			display: block;
-			font-size: 1.3rem;
-			line-height: 0.25;
-			font-weight: 400;
-		}
-	}
-	p {
-		margin: 10px 0;
-	}
-	nav {
-		li {
-			margin: 7% 0;
-		}
-		a {
-			display: inline-block;
-			width: 100%;
-			border-radius: 15px;
-			border: 1px solid $lightAccentColorQuaternary;
-			background-color: $lightAccentColor;
-			font-family: $bodyFont;
-			font-weight: 600;
-			font-size: 1.2rem;
-			transition: background-color ease-in-out 0.35s;
-			&:hover,
-			&:focus,
-			&:active {
-				background-color: $lightAccentColorSecondary;
-				color: white;
-				transition: background-color
-					cubic-bezier(0.165, 0.84, 0.44, 1) 0.35s;
-			}
-		}
-	}
-}
-
 // Intro section typography, including text animations
 .intro {
+	.handwritten {
+		font-family: $scribbleFont;
+		font-weight: 400;
+		color: $lightLinks;
+		font-size: 1.4rem;
+	}
 	position: relative;
 	text-align: center;
 	.big-copy {
 		font-family: $headingFont;
-		font-size: 2.4rem;
+		font-size: 1.4rem;
 		line-height: 50px;
 	}
 	// Highlighting animation
@@ -123,7 +79,7 @@ header {
 
 // About section typography
 .about {
-	text-align: left;
+	text-align: center;
 	.subtitle-copy {
 		margin-bottom: 3%;
 	}
@@ -132,7 +88,7 @@ header {
 	}
 	.text-copy,
 	.handwritten {
-		font-size: 1.2rem;
+		font-size: 1rem;
 	}
 	.handwritten {
 		font-family: $scribbleFont;
@@ -215,16 +171,17 @@ header {
 		a {
 			padding: 2% 30px;
 			border: 2px solid $lightAccentColorQuaternary;
-			border-radius: 10px;
+			border-radius: 5px;
 			font-size: 2rem;
 			color: $lightLinks;
 			background-color: $lightBackground;
-			transition: background-color 0.5s ease, color 0.5s ease;
+			transition: background-color 0.25s ease, color 0.25s ease;
 			&:focus,
 			&:hover {
-				color: $lightAccentColorSecondary;
+				color: white;
 				background-color: $lightAccentColorQuaternary;
-				transition: background-color 0.5s ease, color 0.5s ease;
+				transition: background-color 0.25s ease,
+					color 0.25s ease;
 			}
 		}
 	}
@@ -241,11 +198,11 @@ header {
 		li {
 			display: inline;
 			a {
-				transition: all 0.5s ease;
+				transition: all 0.25s ease;
 				&:focus,
 				&:hover,
 				&:active {
-					transition: all 0.5s ease;
+					transition: all 0.25s ease;
 					color: $lightAccentColorQuaternary;
 					filter: drop-shadow(
 						2px 2px 2px $lightAccentColorTertiary
@@ -265,12 +222,12 @@ header {
 	button {
 		font-weight: bold;
 		border: 2px solid $lightAccentColor;
-		transition: all 0.5s ease;
+		transition: all 0.25s ease;
 		&:hover,
 		&:focus,
 		&:active {
 			color: $lightAccentColorSecondary;
-			transition: all 0.5s ease;
+			transition: all 0.25s ease;
 			transform: translateY(-6px);
 			border-color: $lightAccentColorQuaternary;
 			background-color: $lightAccentColorQuaternary;
