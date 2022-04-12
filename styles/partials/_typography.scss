@@ -79,6 +79,25 @@ body {
 
 // About section typography
 .about {
+	.highlight {
+		position: relative;
+		font-weight: bold;
+		padding: 5px;
+		z-index: 20;
+	}
+	.highlight::after {
+		content: "";
+		background-color: $lightAccentColor;
+		box-shadow: 2px 2px 5px $lightAccentColor;
+		position: absolute;
+		display: block;
+		height: 50%;
+		width: 100%;
+		top: 30%;
+		left: 0%;
+		opacity: 0.4;
+		z-index: -10;
+	}
 	text-align: center;
 	.subtitle-copy {
 		margin-bottom: 3%;

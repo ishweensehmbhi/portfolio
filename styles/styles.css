@@ -420,6 +420,26 @@ body a {
 .about {
   text-align: center;
 }
+.about .highlight {
+  position: relative;
+  font-weight: bold;
+  padding: 5px;
+  z-index: 20;
+}
+.about .highlight::after {
+  content: "";
+  background-color: #e6d6ff;
+  -webkit-box-shadow: 2px 2px 5px #e6d6ff;
+          box-shadow: 2px 2px 5px #e6d6ff;
+  position: absolute;
+  display: block;
+  height: 50%;
+  width: 100%;
+  top: 30%;
+  left: 0%;
+  opacity: 0.4;
+  z-index: -10;
+}
 .about .subtitle-copy {
   margin-bottom: 3%;
 }
