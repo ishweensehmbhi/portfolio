@@ -263,7 +263,7 @@ template {
 }
 
 header {
-  z-index: 20;
+  z-index: 30;
   width: 100%;
   position: fixed;
   display: -webkit-box;
@@ -318,7 +318,7 @@ header nav ul {
 header nav ul a {
   background-color: #e6d6ff;
   color: black;
-  font-family: "Mulish", serif;
+  font-family: monospace;
   font-weight: 600;
   font-size: 1.2rem;
   -webkit-transition: background-color ease-in-out 0.35s;
@@ -348,7 +348,7 @@ h6 {
 }
 
 body {
-  font-family: "Mulish", serif;
+  font-family: monospace;
   line-height: 1.875rem;
   color: #000;
 }
@@ -366,15 +366,19 @@ body a {
   text-align: center;
 }
 
-.next-section-chevron {
-  margin-top: 15px;
+.next-section {
+  margin-top: 25px;
   color: #afa8ba;
+  background-color: #464258;
+  border-radius: 15px;
+  padding: 20px;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
 }
-.next-section-chevron:hover, .next-section-chevron:focus {
+.next-section:hover, .next-section:focus {
   color: #ffc8da;
-}
-.next-section-chevron i {
-  font-size: 3em;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
 }
 
 .intro {
@@ -382,39 +386,19 @@ body a {
   text-align: center;
 }
 .intro .handwritten {
-  font-family: "Nanum Pen Script", sans-serif;
+  font-family: monospace;
   font-weight: 400;
   color: #707070;
   font-size: 1.4rem;
 }
 .intro .big-copy {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.4rem;
-  line-height: 50px;
+  font-family: monospace;
+  font-size: 1rem;
+  text-align: left;
+  margin-bottom: 30px;
 }
-.intro .highlight {
-  -webkit-animation: highlight-effect 1.5s;
-          animation: highlight-effect 1.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  background-size: 200%;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #fff), color-stop(50%, transparent));
-  background-image: linear-gradient(to right, #fff 50%, transparent 50%);
-}
-.intro .highlight:nth-of-type(1) {
-  background-color: #e6d6ff;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-.intro .highlight:nth-of-type(2) {
-  background-color: #ffc8da;
-  -webkit-animation-delay: 2.5s;
-          animation-delay: 2.5s;
-}
-.intro .highlight:nth-of-type(3) {
-  background-color: #ffdf84;
-  -webkit-animation-delay: 4s;
-          animation-delay: 4s;
+.intro .title-copy {
+  font-family: monospace;
 }
 
 .about {
@@ -672,6 +656,42 @@ main::after {
 .intro div.avatar img {
   border-radius: 50%;
 }
+.intro .wrapper {
+  padding: 40px;
+  border-top: 25px solid #5a5475;
+  border-radius: 10px;
+  background-color: rgba(179, 148, 241, 0.3137254902);
+  position: relative;
+}
+.intro .dot1,
+.intro .dot2,
+.intro .dot3 {
+  height: 10px;
+  width: 10px;
+  background-color: #999;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+}
+.intro .dot1 {
+  left: 15px;
+  top: -17px;
+}
+.intro .dot2 {
+  top: -17px;
+  left: 30px;
+}
+.intro .dot3 {
+  top: -17px;
+  left: 45px;
+}
+.intro .window-title {
+  color: white;
+  position: absolute;
+  top: -27px;
+  font-size: 0.9rem;
+  left: 45%;
+}
 
 .wrapper {
   width: 90%;
@@ -737,6 +757,7 @@ section {
 }
 
 .projects {
+  overflow: hidden;
   margin-bottom: 1vh;
 }
 .projects article {

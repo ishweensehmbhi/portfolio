@@ -25,22 +25,24 @@ body {
 	text-align: center;
 }
 
-.next-section-chevron {
-	margin-top: 15px;
+.next-section {
+	margin-top: 25px;
 	color: $lightAccentColorQuaternary;
+	background-color: #464258;
+	border-radius: 15px;
+	padding: 20px;
+	transition: all 0.25s;
 	&:hover,
 	&:focus {
 		color: $lightAccentColorSecondary;
-	}
-	i {
-		font-size: 3em;
+		transition: all 0.25s;
 	}
 }
 
 // Intro section typography, including text animations
 .intro {
 	.handwritten {
-		font-family: $scribbleFont;
+		font-family: $bodyFont;
 		font-weight: 400;
 		color: $lightLinks;
 		font-size: 1.4rem;
@@ -48,32 +50,13 @@ body {
 	position: relative;
 	text-align: center;
 	.big-copy {
-		font-family: $headingFont;
-		font-size: 1.4rem;
-		line-height: 50px;
+		font-family: $bodyFont;
+		font-size: 1rem;
+		text-align: left;
+		margin-bottom: 30px;
 	}
-	// Highlighting animation
-	.highlight {
-		animation: highlight-effect 1.5s;
-		animation-fill-mode: forwards;
-		background-size: 200%;
-		background-image: linear-gradient(
-			to right,
-			$lightBackground 50%,
-			transparent 50%
-		);
-	}
-	.highlight:nth-of-type(1) {
-		background-color: $lightAccentColor;
-		animation-delay: 1s;
-	}
-	.highlight:nth-of-type(2) {
-		background-color: $lightAccentColorSecondary;
-		animation-delay: 2.5s;
-	}
-	.highlight:nth-of-type(3) {
-		background-color: $lightAccentColorTertiary;
-		animation-delay: 4s;
+	.title-copy {
+		font-family: monospace;
 	}
 }
 
