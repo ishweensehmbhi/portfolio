@@ -318,7 +318,7 @@ header nav ul {
 header nav ul a {
   background-color: #e6d6ff;
   color: black;
-  font-family: monospace;
+  font-family: "Mulish", sans-serif;
   font-weight: 600;
   font-size: 1.2rem;
   -webkit-transition: background-color ease-in-out 0.35s;
@@ -344,11 +344,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Bree Serif", serif;
 }
 
 body {
-  font-family: monospace;
+  font-family: "Mulish", sans-serif;
   line-height: 1.875rem;
   color: #000;
 }
@@ -368,15 +368,18 @@ body a {
 
 .next-section {
   margin-top: 25px;
-  color: #afa8ba;
-  background-color: #464258;
+  color: #464258;
+  background-color: #ffc8da;
+  border: 2px dashed #464258;
   border-radius: 15px;
   padding: 20px;
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
 }
 .next-section:hover, .next-section:focus {
-  color: #ffc8da;
+  color: white;
+  background-color: #464258;
+  border: 2px dashed white;
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
 }
@@ -385,20 +388,14 @@ body a {
   position: relative;
   text-align: center;
 }
-.intro .handwritten {
-  font-family: monospace;
-  font-weight: 400;
-  color: #707070;
-  font-size: 1.4rem;
-}
 .intro .big-copy {
   font-family: monospace;
   font-size: 1rem;
   text-align: left;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 .intro .title-copy {
-  font-family: monospace;
+  font-family: "Bree Serif", serif;
 }
 
 .about {
@@ -633,19 +630,9 @@ main {
           align-items: center;
   position: relative;
 }
-main::after {
-  content: "";
-  background-image: url("../assets/header-deco.png");
-  width: 100%;
-  position: absolute;
-  z-index: 0;
-  height: 600px;
-  background-repeat: none;
-}
 
 .intro {
   min-block-size: 100vh;
-  z-index: 10;
 }
 .intro div.avatar {
   width: 200px;
@@ -655,13 +642,17 @@ main::after {
 }
 .intro div.avatar img {
   border-radius: 50%;
+  -webkit-filter: drop-shadow(2px 2px grey);
+          filter: drop-shadow(2px 2px grey);
 }
 .intro .wrapper {
-  padding: 40px;
+  padding: 50px;
   border-top: 25px solid #5a5475;
   border-radius: 10px;
-  background-color: rgba(179, 148, 241, 0.3137254902);
+  background-color: rgba(179, 148, 241, 0.5647058824);
   position: relative;
+  -webkit-box-shadow: 10px 10px 1px rgba(255, 200, 218, 0.5647058824), 20px 20px 1px rgba(255, 223, 132, 0.5647058824);
+          box-shadow: 10px 10px 1px rgba(255, 200, 218, 0.5647058824), 20px 20px 1px rgba(255, 223, 132, 0.5647058824);
 }
 .intro .dot1,
 .intro .dot2,
@@ -690,7 +681,7 @@ main::after {
   position: absolute;
   top: -27px;
   font-size: 0.9rem;
-  left: 45%;
+  left: 47%;
 }
 
 .wrapper {

@@ -27,36 +27,34 @@ body {
 
 .next-section {
 	margin-top: 25px;
-	color: $lightAccentColorQuaternary;
-	background-color: #464258;
+	color: #464258;
+	background-color: $lightAccentColorSecondary;
+	border: 2px dashed #464258;
+
 	border-radius: 15px;
 	padding: 20px;
 	transition: all 0.25s;
 	&:hover,
 	&:focus {
-		color: $lightAccentColorSecondary;
+		color: white;
+		background-color: #464258;
+		border: 2px dashed white;
 		transition: all 0.25s;
 	}
 }
 
 // Intro section typography, including text animations
 .intro {
-	.handwritten {
-		font-family: $bodyFont;
-		font-weight: 400;
-		color: $lightLinks;
-		font-size: 1.4rem;
-	}
 	position: relative;
 	text-align: center;
 	.big-copy {
-		font-family: $bodyFont;
+		font-family: $mono;
 		font-size: 1rem;
 		text-align: left;
-		margin-bottom: 30px;
+		margin-bottom: 50px;
 	}
 	.title-copy {
-		font-family: monospace;
+		font-family: $headingFont;
 	}
 }
 

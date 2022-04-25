@@ -5,15 +5,6 @@ main {
 	flex-direction: column;
 	align-items: center;
 	position: relative;
-	&::after {
-		content: "";
-		background-image: url("../assets/header-deco.png");
-		width: 100%;
-		position: absolute;
-		z-index: 0;
-		height: 600px;
-		background-repeat: none;
-	}
 }
 
 .intro {
@@ -25,15 +16,16 @@ main {
 		margin: 0 auto;
 		img {
 			border-radius: 50%;
+			filter: drop-shadow(2px 2px grey);
 		}
 	}
-	z-index: 10;
 	.wrapper {
-		padding: 40px;
+		padding: 50px;
 		border-top: 25px solid #5a5475;
 		border-radius: 10px;
-		background-color: #b394f150;
+		background-color: #b394f190;
 		position: relative;
+		box-shadow: 10px 10px 1px #ffc8da90, 20px 20px 1px #ffdf8490;
 	}
 	.dot1,
 	.dot2,
@@ -62,7 +54,7 @@ main {
 		position: absolute;
 		top: -27px;
 		font-size: 0.9rem;
-		left: 45%;
+		left: 47%;
 	}
 }
 
