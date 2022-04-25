@@ -19,17 +19,18 @@ body {
 
 .subtitle-copy {
 	font-weight: bold;
-	text-transform: uppercase;
-	filter: drop-shadow(2px 2px 3px $lightAccentColor);
+	color: $darkAccentColor;
+	filter: drop-shadow(4px 4px 1px $lightAccentColorSecondary);
 	margin-bottom: 5%;
-	text-align: center;
+	text-align: right;
+	font-size: 3rem;
 }
 
 .next-section {
 	margin-top: 25px;
-	color: #464258;
+	color: $darkAccentColor;
 	background-color: $lightAccentColorSecondary;
-	border: 2px dashed #464258;
+	border: 2px dashed $darkAccentColor;
 	border-radius: 15px;
 	padding: 20px;
 	transition: all 0.5s;
@@ -37,7 +38,7 @@ body {
 	&:hover,
 	&:focus {
 		color: white;
-		background-color: #464258;
+		background-color: $darkAccentColor;
 		border: 2px dashed white;
 		transition: all 0.5s;
 		filter: none;
@@ -64,66 +65,27 @@ body {
 	.highlight {
 		position: relative;
 		font-weight: bold;
+		color: $darkAccentColor;
 		padding: 5px;
 		z-index: 20;
 	}
 	.highlight::after {
 		content: "";
-		background-color: $lightAccentColor;
-		box-shadow: 2px 2px 5px $lightAccentColor;
+		background-color: $lightAccentColorSecondary;
 		position: absolute;
 		display: block;
-		height: 50%;
+		height: 40%;
 		width: 100%;
-		top: 30%;
+		bottom: 10%;
 		left: 0%;
-		opacity: 0.4;
+		opacity: 0.6;
 		z-index: -10;
 	}
 	text-align: center;
-	.subtitle-copy {
-		margin-bottom: 3%;
-	}
-	sup {
-		color: $lightLinks;
-	}
 	.text-copy,
 	.handwritten {
 		font-size: 1rem;
-	}
-	.handwritten {
-		font-family: $scribbleFont;
-		font-weight: 400;
-		color: $lightLinks;
-		a {
-			transition: all 0.25s ease-in;
-			background-color: $lightAccentColorTertiary;
-			color: $lightText;
-			border-radius: 10px;
-			&:visited {
-				color: $lightText;
-			}
-			&:hover,
-			&:focus,
-			&:active {
-				background-color: $lightAccentColorSecondary;
-				transition: all 0.25s ease-in;
-			}
-		}
-	}
-	details {
-		text-align: center;
-	}
-	summary {
-		cursor: pointer;
-		transition: all 0.5s ease-in;
-		&:hover,
-		&:focus,
-		&:active {
-			background-color: $lightAccentColorTertiary;
-			transition: all 0.5s ease-in;
-			border-radius: 10px;
-		}
+		font-family: $mono;
 	}
 }
 
@@ -137,14 +99,17 @@ body {
 		padding: 0;
 	}
 	h3 {
-		text-transform: uppercase;
-		filter: drop-shadow(1px 1px 3px $lightAccentColorSecondary);
+		font-family: $headingFont;
+		font-size: 1.5rem;
 		margin-bottom: 2.5%;
+		color: $darkAccentColor;
+		letter-spacing: 1px;
 	}
 	p {
 		margin-bottom: 4%;
+		font-family: $mono;
+		font-size: 0.9rem;
 	}
-
 	.stack {
 		padding: 3%;
 		.stack-icon {
@@ -170,19 +135,19 @@ body {
 	}
 	li {
 		a {
-			padding: 2% 30px;
-			border: 2px solid $lightAccentColorQuaternary;
+			padding: 10px 30px;
+			border: 2px dashed $darkAccentColor;
 			border-radius: 5px;
-			font-size: 2rem;
-			color: $lightLinks;
-			background-color: $lightBackground;
-			transition: background-color 0.25s ease, color 0.25s ease;
+			font-size: 1.5rem;
+			color: $darkAccentColor;
+			background-color: $lightAccentColorSecondary;
+			transition: all 0.25s ease-in-out;
 			&:focus,
 			&:hover {
 				color: white;
-				background-color: $lightAccentColorQuaternary;
-				transition: background-color 0.25s ease,
-					color 0.25s ease;
+				border: 2px dashed white;
+				background-color: $darkAccentColor;
+				transition: all 0.25s ease-in-out;
 			}
 		}
 	}

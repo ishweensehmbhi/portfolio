@@ -359,11 +359,12 @@ body a {
 
 .subtitle-copy {
   font-weight: bold;
-  text-transform: uppercase;
-  -webkit-filter: drop-shadow(2px 2px 3px #e6d6ff);
-          filter: drop-shadow(2px 2px 3px #e6d6ff);
+  color: #464258;
+  -webkit-filter: drop-shadow(4px 4px 1px #ffc8da);
+          filter: drop-shadow(4px 4px 1px #ffc8da);
   margin-bottom: 5%;
-  text-align: center;
+  text-align: right;
+  font-size: 3rem;
 }
 
 .next-section {
@@ -393,7 +394,7 @@ body a {
   text-align: center;
 }
 .intro .big-copy {
-  font-family: monospace;
+  font-family: monospace, sans-serif;
   font-size: 1rem;
   text-align: left;
   margin-bottom: 50px;
@@ -408,66 +409,26 @@ body a {
 .about .highlight {
   position: relative;
   font-weight: bold;
+  color: #464258;
   padding: 5px;
   z-index: 20;
 }
 .about .highlight::after {
   content: "";
-  background-color: #e6d6ff;
-  -webkit-box-shadow: 2px 2px 5px #e6d6ff;
-          box-shadow: 2px 2px 5px #e6d6ff;
+  background-color: #ffc8da;
   position: absolute;
   display: block;
-  height: 50%;
+  height: 40%;
   width: 100%;
-  top: 30%;
+  bottom: 10%;
   left: 0%;
-  opacity: 0.4;
+  opacity: 0.6;
   z-index: -10;
-}
-.about .subtitle-copy {
-  margin-bottom: 3%;
-}
-.about sup {
-  color: #707070;
 }
 .about .text-copy,
 .about .handwritten {
   font-size: 1rem;
-}
-.about .handwritten {
-  font-family: "Nanum Pen Script", sans-serif;
-  font-weight: 400;
-  color: #707070;
-}
-.about .handwritten a {
-  -webkit-transition: all 0.25s ease-in;
-  transition: all 0.25s ease-in;
-  background-color: #ffdf84;
-  color: #000;
-  border-radius: 10px;
-}
-.about .handwritten a:visited {
-  color: #000;
-}
-.about .handwritten a:hover, .about .handwritten a:focus, .about .handwritten a:active {
-  background-color: #ffc8da;
-  -webkit-transition: all 0.25s ease-in;
-  transition: all 0.25s ease-in;
-}
-.about details {
-  text-align: center;
-}
-.about summary {
-  cursor: pointer;
-  -webkit-transition: all 0.5s ease-in;
-  transition: all 0.5s ease-in;
-}
-.about summary:hover, .about summary:focus, .about summary:active {
-  background-color: #ffdf84;
-  -webkit-transition: all 0.5s ease-in;
-  transition: all 0.5s ease-in;
-  border-radius: 10px;
+  font-family: monospace, sans-serif;
 }
 
 .projects {
@@ -481,13 +442,16 @@ body a {
   padding: 0;
 }
 .projects h3 {
-  text-transform: uppercase;
-  -webkit-filter: drop-shadow(1px 1px 3px #ffc8da);
-          filter: drop-shadow(1px 1px 3px #ffc8da);
+  font-family: "Bree Serif", serif;
+  font-size: 1.5rem;
   margin-bottom: 2.5%;
+  color: #464258;
+  letter-spacing: 1px;
 }
 .projects p {
   margin-bottom: 4%;
+  font-family: monospace, sans-serif;
+  font-size: 0.9rem;
 }
 .projects .stack {
   padding: 3%;
@@ -511,20 +475,21 @@ body a {
   margin: 2.5% 0;
 }
 .projects li a {
-  padding: 2% 30px;
-  border: 2px solid #afa8ba;
+  padding: 10px 30px;
+  border: 2px dashed #464258;
   border-radius: 5px;
-  font-size: 2rem;
-  color: #707070;
-  background-color: #fff;
-  -webkit-transition: background-color 0.25s ease, color 0.25s ease;
-  transition: background-color 0.25s ease, color 0.25s ease;
+  font-size: 1.5rem;
+  color: #464258;
+  background-color: #ffc8da;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 .projects li a:focus, .projects li a:hover {
   color: white;
-  background-color: #afa8ba;
-  -webkit-transition: background-color 0.25s ease, color 0.25s ease;
-  transition: background-color 0.25s ease, color 0.25s ease;
+  border: 2px dashed white;
+  background-color: #464258;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
 .contact ul {
@@ -658,28 +623,6 @@ main {
   -webkit-box-shadow: 10px 10px 1px rgba(255, 200, 218, 0.5647058824), 20px 20px 1px rgba(255, 223, 132, 0.5647058824);
           box-shadow: 10px 10px 1px rgba(255, 200, 218, 0.5647058824), 20px 20px 1px rgba(255, 223, 132, 0.5647058824);
 }
-.intro .dot1,
-.intro .dot2,
-.intro .dot3 {
-  height: 10px;
-  width: 10px;
-  background-color: #999;
-  border-radius: 50%;
-  display: inline-block;
-  position: absolute;
-}
-.intro .dot1 {
-  left: 15px;
-  top: -17px;
-}
-.intro .dot2 {
-  top: -17px;
-  left: 30px;
-}
-.intro .dot3 {
-  top: -17px;
-  left: 45px;
-}
 .intro .window-title {
   font-weight: 600;
   color: white;
@@ -690,6 +633,32 @@ main {
           transform: translateX(-50%);
   font-size: 0.9rem;
   text-align: center;
+}
+
+.dot1,
+.dot2,
+.dot3 {
+  height: 10px;
+  width: 10px;
+  background-color: #999;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+}
+
+.dot1 {
+  left: 15px;
+  top: -17px;
+}
+
+.dot2 {
+  top: -17px;
+  left: 30px;
+}
+
+.dot3 {
+  top: -17px;
+  left: 45px;
 }
 
 .wrapper {
@@ -712,59 +681,21 @@ section {
           justify-content: center;
 }
 
-.about .about-text {
-  margin-bottom: 50px;
-}
-.about .skills {
-  text-align: center;
-}
-.about .skills h2 {
-  margin-bottom: 5%;
-}
-.about .skills ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.about .skills ul li {
-  text-align: center;
-  width: 6%;
-  margin: 0 2% 7% 2%;
-}
-.about .skills ul li i {
-  font-size: 2.5rem;
-  color: #afa8ba;
-  -webkit-filter: drop-shadow(2px 2px 2px #ffdf84);
-          filter: drop-shadow(2px 2px 2px #ffdf84);
-}
-.about .skills ul li p {
-  font-size: 1.1rem;
-  font-family: "Nanum Pen Script", sans-serif;
-  margin: 3% 0 0;
-}
-
 .projects {
   overflow: hidden;
   margin-bottom: 1vh;
 }
 .projects article {
+  position: relative;
+  border: 3px solid #5a5475;
+  background-color: rgba(255, 200, 218, 0.2);
   -webkit-filter: drop-shadow(0px 2px 2px #e6d6ff);
           filter: drop-shadow(0px 2px 2px #e6d6ff);
-  border-radius: 5px;
-  padding: 1.5%;
+  border-top: 25px solid #5a5475;
+  border-radius: 10px;
   margin-bottom: 3.5%;
+  padding: 30px;
+  z-index: 20;
 }
 .projects article .flex {
   display: -webkit-box;
@@ -814,6 +745,67 @@ section {
 }
 .projects article:last-child {
   margin-bottom: 0;
+}
+
+.about {
+  background-color: rgba(255, 223, 132, 0.35);
+  border-radius: 15px;
+  position: relative;
+  border: 3px dashed rgba(255, 200, 218, 0.8);
+}
+.about::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border: 3px dashed rgba(255, 200, 218, 0.8);
+  z-index: 10;
+  border-radius: 15px;
+}
+.about .about-text {
+  margin-bottom: 50px;
+  text-align: left;
+}
+.about .skills {
+  text-align: center;
+}
+.about .skills h2 {
+  margin-bottom: 5%;
+}
+.about .skills ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.about .skills ul li {
+  text-align: center;
+  width: 6%;
+  margin: 0 2% 7% 2%;
+}
+.about .skills ul li i {
+  font-size: 2.5rem;
+  color: #afa8ba;
+  -webkit-filter: drop-shadow(2px 2px 2px #ffdf84);
+          filter: drop-shadow(2px 2px 2px #ffdf84);
+}
+.about .skills ul li p {
+  font-size: 0.7rem;
+  font-family: monospace, sans-serif;
+  margin: 3% 0 0;
 }
 
 .contact {
