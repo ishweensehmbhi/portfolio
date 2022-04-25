@@ -385,8 +385,8 @@ body a {
   border: 2px dashed white;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  -webkit-filter: none;
-          filter: none;
+  -webkit-filter: drop-shadow(5px 5px rgba(70, 66, 88, 0.4392156863));
+          filter: drop-shadow(5px 5px rgba(70, 66, 88, 0.4392156863));
 }
 
 .intro {
@@ -401,34 +401,6 @@ body a {
 }
 .intro .title-copy {
   font-family: "Bree Serif", serif;
-}
-
-.about {
-  text-align: center;
-}
-.about .highlight {
-  position: relative;
-  font-weight: bold;
-  color: #464258;
-  padding: 5px;
-  z-index: 20;
-}
-.about .highlight::after {
-  content: "";
-  background-color: #ffc8da;
-  position: absolute;
-  display: block;
-  height: 40%;
-  width: 100%;
-  bottom: 10%;
-  left: 0%;
-  opacity: 0.6;
-  z-index: -10;
-}
-.about .text-copy,
-.about .handwritten {
-  font-size: 1rem;
-  font-family: monospace, sans-serif;
 }
 
 .projects {
@@ -492,34 +464,86 @@ body a {
   transition: all 0.25s ease-in-out;
 }
 
+.about {
+  text-align: center;
+}
+.about .highlight {
+  position: relative;
+  font-weight: bold;
+  color: #464258;
+  padding: 5px;
+  z-index: 20;
+}
+.about .highlight::after {
+  content: "";
+  background-color: #ffc8da;
+  position: absolute;
+  display: block;
+  height: 40%;
+  width: 100%;
+  bottom: 10%;
+  left: 0%;
+  opacity: 0.6;
+  z-index: -10;
+}
+.about .text-copy {
+  font-size: 1rem;
+  font-family: monospace, sans-serif;
+}
+
+.contact {
+  font-family: monospace, sans-serif;
+}
+.contact ::-webkit-input-placeholder {
+  font-family: monospace, sans-serif;
+}
+.contact ::-moz-placeholder {
+  font-family: monospace, sans-serif;
+}
+.contact :-ms-input-placeholder {
+  font-family: monospace, sans-serif;
+}
+.contact ::-ms-input-placeholder {
+  font-family: monospace, sans-serif;
+}
+.contact ::placeholder {
+  font-family: monospace, sans-serif;
+}
+.contact .subtitle-copy {
+  margin-top: 0;
+}
 .contact ul {
   list-style: none;
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  margin: 3.5% 0 3.5%;
-}
-.contact ul li {
-  display: inline;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-top: 8px;
 }
 .contact ul li a {
+  color: #464258;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
+  font-size: 2.5rem;
 }
 .contact ul li a:focus, .contact ul li a:hover, .contact ul li a:active {
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
-  color: #afa8ba;
-  -webkit-filter: drop-shadow(2px 2px 2px #ffdf84);
-          filter: drop-shadow(2px 2px 2px #ffdf84);
+  color: #ffc8da;
+  -webkit-filter: drop-shadow(-2px 2px 0px #464258);
+          filter: drop-shadow(-2px 2px 0px #464258);
+}
+.contact .contact-info {
+  position: relative;
+  text-align: right;
+  padding-right: 10px;
 }
 .contact .contact-info i {
   font-size: 2.2rem;
@@ -529,30 +553,31 @@ body a {
 }
 .contact button {
   font-weight: bold;
-  border: 2px solid #e6d6ff;
-  -webkit-transition: all 0.25s ease;
-  transition: all 0.25s ease;
+  border: 3px solid #464258;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+  font-family: monospace, sans-serif;
 }
 .contact button:hover, .contact button:focus, .contact button:active {
   color: #ffc8da;
-  -webkit-transition: all 0.25s ease;
-  transition: all 0.25s ease;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
   -webkit-transform: translateY(-6px);
           transform: translateY(-6px);
-  border-color: #afa8ba;
-  background-color: #afa8ba;
+  border-color: #464258;
+  background-color: #464258;
   -webkit-box-shadow: 0px 15px 20px #ffc8da;
           box-shadow: 0px 15px 20px #ffc8da;
 }
 
 .footer-copy {
-  font-weight: 500;
-  margin: 0;
+  margin: 0 auto;
   padding: 20px 0 20px;
-  font-size: 1.4rem;
+  font-size: 1rem;
+  font-family: monospace, sans-serif;
 }
 .footer-copy i {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 @-webkit-keyframes highlight-effect {
@@ -618,7 +643,7 @@ main {
   padding: 50px;
   border-top: 25px solid #5a5475;
   border-radius: 10px;
-  background-color: rgba(179, 148, 241, 0.5647058824);
+  background-color: rgba(179, 148, 241, 0.4392156863);
   position: relative;
   -webkit-box-shadow: 10px 10px 1px rgba(255, 200, 218, 0.5647058824), 20px 20px 1px rgba(255, 223, 132, 0.5647058824);
           box-shadow: 10px 10px 1px rgba(255, 200, 218, 0.5647058824), 20px 20px 1px rgba(255, 223, 132, 0.5647058824);
@@ -798,9 +823,9 @@ section {
 }
 .about .skills ul li i {
   font-size: 2.5rem;
-  color: #afa8ba;
-  -webkit-filter: drop-shadow(2px 2px 2px #ffdf84);
-          filter: drop-shadow(2px 2px 2px #ffdf84);
+  color: #464258;
+  -webkit-filter: drop-shadow(2px -2px 1px pink);
+          filter: drop-shadow(2px -2px 1px pink);
 }
 .about .skills ul li p {
   font-size: 0.7rem;
@@ -834,7 +859,7 @@ section {
   padding: 2%;
   margin-bottom: 3%;
   border-radius: 5px;
-  border: 3px solid #e6d6ff;
+  border: 3px solid #464258;
 }
 .contact .wrapper textarea {
   resize: none;
@@ -849,7 +874,7 @@ section {
 }
 
 a .back-to-top {
-  color: #854c5a;
+  color: #464258;
   display: none;
   position: fixed;
   bottom: 6vh;
@@ -888,11 +913,6 @@ footer::before {
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
-  }
-
-  .next-section-chevron i {
-    -webkit-animation: chevron-bounce 1s infinite ease-in-out alternate;
-            animation: chevron-bounce 1s infinite ease-in-out alternate;
   }
 }
 @media (max-width: 1300px) {
@@ -965,10 +985,36 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    position: relative;
   }
   .contact .wrapper .contact-info,
 .contact .wrapper .contact-form {
     width: 100%;
+  }
+  .contact .wrapper .contact-info {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .contact .wrapper ul {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contact .wrapper ul li {
+    padding: 0 15px;
+  }
+  .contact .wrapper .contact-form {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
   }
 }
 @media (max-width: 1000px) {
@@ -979,7 +1025,11 @@ footer {
 @media (max-width: 500px) {
   header nav ul a {
     font-size: 1rem;
-    padding: 15px;
+    padding: 10px;
+  }
+
+  .about::after {
+    display: none;
   }
 
   .intro .big-copy {
@@ -1044,10 +1094,6 @@ footer {
   }
 }
 @media (max-height: 900px) {
-  .next-section-chevron {
-    display: none;
-  }
-
   section {
     margin-top: 10%;
   }

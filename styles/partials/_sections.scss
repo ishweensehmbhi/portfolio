@@ -23,7 +23,7 @@ main {
 		padding: 50px;
 		border-top: 25px solid #5a5475;
 		border-radius: 10px;
-		background-color: #b394f190;
+		background-color: #b394f170;
 		position: relative;
 		box-shadow: 10px 10px 1px #ffc8da90, 20px 20px 1px #ffdf8490;
 	}
@@ -166,10 +166,8 @@ section {
 				margin: 0 2% 7% 2%;
 				i {
 					font-size: 2.5rem;
-					color: $lightAccentColorQuaternary;
-					filter: drop-shadow(
-						2px 2px 2px $lightAccentColorTertiary
-					);
+					color: $darkAccentColor;
+					filter: drop-shadow(2px -2px 1px pink);
 				}
 				p {
 					font-size: 0.7rem;
@@ -200,7 +198,7 @@ section {
 			padding: 2%;
 			margin-bottom: 3%;
 			border-radius: 5px;
-			border: 3px solid $lightAccentColor;
+			border: 3px solid $darkAccentColor;
 		}
 		textarea {
 			resize: none;
@@ -217,7 +215,7 @@ section {
 }
 
 a .back-to-top {
-	color: #854c5a;
+	color: $darkAccentColor;
 	display: none;
 	position: fixed;
 	bottom: 6vh;

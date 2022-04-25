@@ -2,9 +2,6 @@
 	html {
 		scroll-behavior: smooth;
 	}
-	.next-section-chevron i {
-		animation: chevron-bounce 1s infinite ease-in-out alternate;
-	}
 }
 
 @media (max-width: 1300px) {
@@ -32,9 +29,6 @@
 
 // Tablet layout
 @media (max-width: 900px) {
-	// .intro .window-title {
-	// 	left: 45%;
-	// }
 	.projects {
 		article {
 			.image-container img {
@@ -79,6 +73,21 @@
 			.contact-form {
 				width: 100%;
 			}
+			position: relative;
+			.contact-info {
+				order: 1;
+			}
+			ul {
+				order: 2;
+				flex-direction: row;
+				justify-content: center;
+				li {
+					padding: 0 15px;
+				}
+			}
+			.contact-form {
+				order: 3;
+			}
 		}
 	}
 }
@@ -92,9 +101,11 @@
 @media (max-width: 500px) {
 	header nav ul a {
 		font-size: 1rem;
-		padding: 15px;
+		padding: 10px;
 	}
-
+	.about::after {
+		display: none;
+	}
 	.intro {
 		.big-copy {
 			font-size: 1.25rem;
@@ -143,9 +154,6 @@
 }
 
 @media (max-height: 900px) {
-	.next-section-chevron {
-		display: none;
-	}
 	section {
 		margin-top: 10%;
 	}

@@ -198,7 +198,6 @@
 					</div>
 				</article>
 
-
 				<!-- Project 3 begins  -->
 				<article class="project">
 					<div class="close-btns">
@@ -315,7 +314,6 @@
 			</div>
 		</section>
 
-
 		<!-- about section begins  -->
 		<section class="about" id="about">
 			<div class="wrapper">
@@ -346,7 +344,8 @@
 					<p class="text-copy">
 						In my spare time, you'll find me playing video games 🎮 , hiking 🏞️, baking sweet
 						treats
-						🧁, reading 📖, or taking care of my houseplants 🪴. Outside of web development, I'm
+						🧁, reading 📖, taking care of my houseplants 🪴, or learning something new 💻.
+						Outside of development, I'm
 						also exploring virtualization and
 						self-hosting FOSS apps, as well as learning to use Linux. Below are some of my
 						frequently used tools.
@@ -425,8 +424,6 @@
 			</div>
 		</section>
 
-
-
 		<!-- contact section begins  -->
 		<section class="contact" id="contact">
 			<div class="wrapper">
@@ -434,36 +431,10 @@
 					<h3 class="subtitle-copy">Let's Connect</h3>
 					<p>Feel free to use the form provided to send me a message directly, or you can
 						connect with me
-						at any of my socials linked here. If you send me your funniest, most groan-inducing
+						at any of my socials. Or, you can send me your best
 						developer joke,
-						I promise to send one back (with a response code 200). Courtesy of the <a
+						I promise (with a response status of 200) to send one back. Courtesy of the <a
 							href="https://sv443.net/jokeapi/v2/" target="_blank">JokeAPI</a>!</p>
-					<ul class="socials">
-						<li>
-							<a href="https://www.linkedin.com/in/ishween/" target="_blank"><i
-									class="fa-brands fa-linkedin" aria-label="LinkedIn"
-									title="LinkedIn"></i><span class="sr-only">Visit My LinkedIn
-								</span></a>
-						</li>
-						<li>
-							<a href="https://github.com/ish-codes" target="_blank"><i
-									class="fa-brands fa-github" aria-label="GitHub"
-									title="GitHub"></i><span class="sr-only">Visit My GitHub
-								</span></a>
-						</li>
-						<li>
-							<a href="https://twitter.com/ish_codes" target="_blank"><i
-									class="fa-brands fa-twitter" aria-label="Twitter"
-									title="Twitter"></i><span class="sr-only">Visit My Twitter
-								</span></a>
-						</li>
-						<li>
-							<a href="https://codepen.io/ishcodes" target="_blank"><i
-									class="fa-brands fa-codepen" aria-label="CodePen"
-									title="CodePen"></i><span class="sr-only">Visit My CodePen
-								</span></a>
-						</li>
-					</ul>
 				</div>
 				<div class="contact-form" data-aos="fade-up" data-aos-duration="400" data-aos="ease-in-out">
 					<form action="https://formspree.io/f/mnqwdype" method="POST">
@@ -488,6 +459,32 @@
 						</fieldset>
 					</form>
 				</div>
+				<ul class="socials" data-aos="fade-down" data-aos-duration="400" data-aos="ease-in-out">
+					<li>
+						<a href="https://www.linkedin.com/in/ishween/" target="_blank"><i
+								class="fa-brands fa-linkedin" aria-label="LinkedIn"
+								title="LinkedIn"></i><span class="sr-only">Visit My LinkedIn
+							</span></a>
+					</li>
+					<li>
+						<a href="https://github.com/ish-codes" target="_blank"><i
+								class="fa-brands fa-github" aria-label="GitHub" title="GitHub"></i><span
+								class="sr-only">Visit My GitHub
+							</span></a>
+					</li>
+					<li>
+						<a href="https://twitter.com/ish_codes" target="_blank"><i
+								class="fa-brands fa-twitter" aria-label="Twitter"
+								title="Twitter"></i><span class="sr-only">Visit My Twitter
+							</span></a>
+					</li>
+					<li>
+						<a href="https://codepen.io/ishcodes" target="_blank"><i
+								class="fa-brands fa-codepen" aria-label="CodePen"
+								title="CodePen"></i><span class="sr-only">Visit My CodePen
+							</span></a>
+					</li>
+				</ul>
 			</div>
 		</section>
 		<a href="#intro"><i class="fa-solid fa-circle-chevron-up back-to-top"></i><span class="sr-only">Go Back to
@@ -507,10 +504,17 @@
 			const myHTML = document.querySelector('html');
 			myHTML.classList.add('no-js');
 
-			const contactsSection = document.querySelectorAll('div');
-			contactsSection.forEach((article) => {
-				article.removeAttribute('data-aos');
-				article.removeAttribute('data-aos-duration');
+			const projectsSection = document.querySelectorAll('div');
+
+			projectsSection.forEach((div) => {
+				div.removeAttribute('data-aos');
+				div.removeAttribute('data-aos-duration');
+			})
+
+			const lists = document.querySelectorAll('ul');
+			lists.forEach((list) => {
+				list.removeAttribute('data-aos');
+				list.removeAttribute('data-aos-duration');
 			})
 		}
 	</script>
