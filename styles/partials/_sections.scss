@@ -50,11 +50,14 @@ main {
 		left: 45px;
 	}
 	.window-title {
+		font-weight: 600;
 		color: white;
 		position: absolute;
 		top: -27px;
+		left: 50%;
+		transform: translateX(-50%);
 		font-size: 0.9rem;
-		left: 47%;
+		text-align: center;
 	}
 }
 

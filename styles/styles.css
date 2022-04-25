@@ -373,15 +373,19 @@ body a {
   border: 2px dashed #464258;
   border-radius: 15px;
   padding: 20px;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-filter: drop-shadow(-5px -5px rgba(70, 66, 88, 0.4392156863));
+          filter: drop-shadow(-5px -5px rgba(70, 66, 88, 0.4392156863));
 }
 .next-section:hover, .next-section:focus {
   color: white;
   background-color: #464258;
   border: 2px dashed white;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-filter: none;
+          filter: none;
 }
 
 .intro {
@@ -677,11 +681,15 @@ main {
   left: 45px;
 }
 .intro .window-title {
+  font-weight: 600;
   color: white;
   position: absolute;
   top: -27px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   font-size: 0.9rem;
-  left: 47%;
+  text-align: center;
 }
 
 .wrapper {
@@ -984,6 +992,10 @@ footer {
 
   .intro .big-copy {
     font-size: 1.25rem;
+    text-align: center;
+  }
+  .intro .wrapper {
+    padding: 50px 22px;
   }
 
   .about .text-copy {

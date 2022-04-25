@@ -30,16 +30,17 @@ body {
 	color: #464258;
 	background-color: $lightAccentColorSecondary;
 	border: 2px dashed #464258;
-
 	border-radius: 15px;
 	padding: 20px;
-	transition: all 0.25s;
+	transition: all 0.5s;
+	filter: drop-shadow(-5px -5px #46425870);
 	&:hover,
 	&:focus {
 		color: white;
 		background-color: #464258;
 		border: 2px dashed white;
-		transition: all 0.25s;
+		transition: all 0.5s;
+		filter: none;
 	}
 }
 

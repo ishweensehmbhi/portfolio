@@ -32,6 +32,9 @@
 
 // Tablet layout
 @media (max-width: 900px) {
+	// .intro .window-title {
+	// 	left: 45%;
+	// }
 	.projects {
 		article {
 			.image-container img {
@@ -95,6 +98,10 @@
 	.intro {
 		.big-copy {
 			font-size: 1.25rem;
+			text-align: center;
+		}
+		.wrapper {
+			padding: 50px 22px;
 		}
 	}
 	.about {
