@@ -19,129 +19,44 @@ body {
 
 .subtitle-copy {
 	font-weight: bold;
-	text-transform: uppercase;
-	filter: drop-shadow(2px 2px 3px $lightAccentColor);
+	color: $darkAccentColor;
+	filter: drop-shadow(4px 4px 1px $lightAccentColorSecondary);
 	margin-bottom: 5%;
-	text-align: center;
+	text-align: right;
+	font-size: 3rem;
 }
 
-.next-section-chevron {
-	margin-top: 15px;
-	color: $lightAccentColorQuaternary;
+.next-section {
+	margin-top: 25px;
+	color: $darkAccentColor;
+	background-color: $lightAccentColorSecondary;
+	border: 2px dashed $darkAccentColor;
+	border-radius: 15px;
+	padding: 20px;
+	transition: all 0.5s;
+	filter: drop-shadow(-5px -5px #46425870);
 	&:hover,
 	&:focus {
-		color: $lightAccentColorSecondary;
-	}
-	i {
-		font-size: 3em;
+		color: white;
+		background-color: $darkAccentColor;
+		border: 2px dashed white;
+		transition: all 0.5s;
+		filter: drop-shadow(5px 5px #46425870);
 	}
 }
 
 // Intro section typography, including text animations
 .intro {
-	.handwritten {
-		font-family: $scribbleFont;
-		font-weight: 400;
-		color: $lightLinks;
-		font-size: 1.4rem;
-	}
 	position: relative;
 	text-align: center;
 	.big-copy {
-		font-family: $headingFont;
-		font-size: 1.4rem;
-		line-height: 50px;
-	}
-	// Highlighting animation
-	.highlight {
-		animation: highlight-effect 1.5s;
-		animation-fill-mode: forwards;
-		background-size: 200%;
-		background-image: linear-gradient(
-			to right,
-			$lightBackground 50%,
-			transparent 50%
-		);
-	}
-	.highlight:nth-of-type(1) {
-		background-color: $lightAccentColor;
-		animation-delay: 1s;
-	}
-	.highlight:nth-of-type(2) {
-		background-color: $lightAccentColorSecondary;
-		animation-delay: 2.5s;
-	}
-	.highlight:nth-of-type(3) {
-		background-color: $lightAccentColorTertiary;
-		animation-delay: 4s;
-	}
-}
-
-// About section typography
-.about {
-	.highlight {
-		position: relative;
-		font-weight: bold;
-		padding: 5px;
-		z-index: 20;
-	}
-	.highlight::after {
-		content: "";
-		background-color: $lightAccentColor;
-		box-shadow: 2px 2px 5px $lightAccentColor;
-		position: absolute;
-		display: block;
-		height: 50%;
-		width: 100%;
-		top: 30%;
-		left: 0%;
-		opacity: 0.4;
-		z-index: -10;
-	}
-	text-align: center;
-	.subtitle-copy {
-		margin-bottom: 3%;
-	}
-	sup {
-		color: $lightLinks;
-	}
-	.text-copy,
-	.handwritten {
+		font-family: $mono;
 		font-size: 1rem;
+		text-align: left;
+		margin-bottom: 50px;
 	}
-	.handwritten {
-		font-family: $scribbleFont;
-		font-weight: 400;
-		color: $lightLinks;
-		a {
-			transition: all 0.25s ease-in;
-			background-color: $lightAccentColorTertiary;
-			color: $lightText;
-			border-radius: 10px;
-			&:visited {
-				color: $lightText;
-			}
-			&:hover,
-			&:focus,
-			&:active {
-				background-color: $lightAccentColorSecondary;
-				transition: all 0.25s ease-in;
-			}
-		}
-	}
-	details {
-		text-align: center;
-	}
-	summary {
-		cursor: pointer;
-		transition: all 0.5s ease-in;
-		&:hover,
-		&:focus,
-		&:active {
-			background-color: $lightAccentColorTertiary;
-			transition: all 0.5s ease-in;
-			border-radius: 10px;
-		}
+	.title-copy {
+		font-family: $headingFont;
 	}
 }
 
@@ -155,14 +70,17 @@ body {
 		padding: 0;
 	}
 	h3 {
-		text-transform: uppercase;
-		filter: drop-shadow(1px 1px 3px $lightAccentColorSecondary);
+		font-family: $headingFont;
+		font-size: 1.5rem;
 		margin-bottom: 2.5%;
+		color: $darkAccentColor;
+		letter-spacing: 1px;
 	}
 	p {
 		margin-bottom: 4%;
+		font-family: $mono;
+		font-size: 0.9rem;
 	}
-
 	.stack {
 		padding: 3%;
 		.stack-icon {
@@ -188,49 +106,84 @@ body {
 	}
 	li {
 		a {
-			padding: 2% 30px;
-			border: 2px solid $lightAccentColorQuaternary;
+			padding: 10px 30px;
+			border: 2px dashed $darkAccentColor;
 			border-radius: 5px;
-			font-size: 2rem;
-			color: $lightLinks;
-			background-color: $lightBackground;
-			transition: background-color 0.25s ease, color 0.25s ease;
+			font-size: 1.5rem;
+			color: $darkAccentColor;
+			background-color: $lightAccentColorSecondary;
+			transition: all 0.25s ease-in-out;
 			&:focus,
 			&:hover {
 				color: white;
-				background-color: $lightAccentColorQuaternary;
-				transition: background-color 0.25s ease,
-					color 0.25s ease;
+				border: 2px dashed white;
+				background-color: $darkAccentColor;
+				transition: all 0.25s ease-in-out;
 			}
 		}
 	}
 }
 
+// About section typography
+.about {
+	.highlight {
+		position: relative;
+		font-weight: bold;
+		color: $darkAccentColor;
+		padding: 5px;
+		z-index: 20;
+	}
+	.highlight::after {
+		content: "";
+		background-color: $lightAccentColorSecondary;
+		position: absolute;
+		display: block;
+		height: 40%;
+		width: 100%;
+		bottom: 10%;
+		left: 0%;
+		opacity: 0.6;
+		z-index: -10;
+	}
+	text-align: center;
+	.text-copy {
+		font-size: 1rem;
+		font-family: $mono;
+	}
+}
+
 .contact {
+	font-family: $mono;
+	::placeholder {
+		font-family: $mono;
+	}
+	.subtitle-copy {
+		margin-top: 0;
+	}
 	ul {
 		list-style: none;
 		padding: 0;
 		display: flex;
-		flex-direction: row;
-		justify-content: space-evenly;
-		margin: 3.5% 0 3.5%;
-		li {
-			display: inline;
-			a {
+		flex-direction: column;
+		justify-content: flex-start;
+		margin-top: 8px;
+		li a {
+			color: $darkAccentColor;
+			transition: all 0.25s ease;
+			font-size: 2.5rem;
+			&:focus,
+			&:hover,
+			&:active {
 				transition: all 0.25s ease;
-				&:focus,
-				&:hover,
-				&:active {
-					transition: all 0.25s ease;
-					color: $lightAccentColorQuaternary;
-					filter: drop-shadow(
-						2px 2px 2px $lightAccentColorTertiary
-					);
-				}
+				color: $lightAccentColorSecondary;
+				filter: drop-shadow(-2px 2px 0px $darkAccentColor);
 			}
 		}
 	}
 	.contact-info {
+		position: relative;
+		text-align: right;
+		padding-right: 10px;
 		i {
 			font-size: 2.2rem;
 		}
@@ -240,28 +193,29 @@ body {
 	}
 	button {
 		font-weight: bold;
-		border: 2px solid $lightAccentColor;
-		transition: all 0.25s ease;
+		border: 3px solid $darkAccentColor;
+		transition: all 0.15s ease;
+		font-family: $mono;
 		&:hover,
 		&:focus,
 		&:active {
 			color: $lightAccentColorSecondary;
-			transition: all 0.25s ease;
+			transition: all 0.15s ease;
 			transform: translateY(-6px);
-			border-color: $lightAccentColorQuaternary;
-			background-color: $lightAccentColorQuaternary;
+			border-color: $darkAccentColor;
+			background-color: $darkAccentColor;
 			box-shadow: 0px 15px 20px $lightAccentColorSecondary;
 		}
 	}
 }
 
 .footer-copy {
-	font-weight: 500;
-	margin: 0;
+	margin: 0 auto;
 	padding: 20px 0 20px;
-	font-size: 1.4rem;
+	font-size: 1rem;
+	font-family: $mono;
 	i {
-		font-size: 1.2rem;
+		font-size: 1rem;
 	}
 }
 
